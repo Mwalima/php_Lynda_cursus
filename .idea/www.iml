@@ -7,10 +7,10 @@
     <orderEntry type="module-library">
       <library name="PHARS">
         <CLASSES>
-          <root url="phar://$MODULE_DIR$/html/composer.phar/" />
+          <root url="phar://$MODULE_DIR$/html/example.com/composer.phar/" />
         </CLASSES>
         <SOURCES>
-          <root url="phar://$MODULE_DIR$/html/composer.phar/" />
+          <root url="phar://$MODULE_DIR$/html/example.com/composer.phar/" />
         </SOURCES>
       </library>
     </orderEntry>

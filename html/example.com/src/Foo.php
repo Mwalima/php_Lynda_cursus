@@ -5,6 +5,7 @@
  * Date: 19/09/16
  * Time: 13:44
  */
+require 'vendor/autoloading.php';
 
 class Foo {
 

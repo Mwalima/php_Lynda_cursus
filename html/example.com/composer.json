@@ -1,0 +1,10 @@
+{
+    "autoload": {
+        "psr-4": {"Acme\\": "src/"}
+    },
+    "name": "acme/hello-world",
+    "require": {
+        "monolog/monolog": "1.0.*"
+    }
+
+}

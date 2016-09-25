@@ -9,9 +9,10 @@ $friends = [
     ['first' => 'John', 'last' => 'Black'],
     ['first' => 'Diana', 'last' => 'Black']
 ];
-usort($friends, function($a, $b) {
-    return [$a['last'], $a['first']] <=> [$b['last'], $b['first']];
-});
+usort($friends, function($a,$b){
+    echo "hello";
+    return [$a['last'],$b['first']]<=> [$b['last'],$a['first']];
+})
 ?>
 <!DOCTYPE html>
 <html lang="en">

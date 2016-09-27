@@ -1,5 +1,6 @@
 <?php
-set_include_path(get_include_path().PATH_SEPARATOR.'/php_Lynda_cursus/example.com/phptest_environment/introducingphp/ch07/07_04/includes');
+//instead of usinge absolute pathes uou can use include path
+set_include_path(get_include_path(). PATH_SEPARATOR . '/var/www/html/php_Lynda_cursus/example.com/phptest_environment/introducingphp/ch07/07_04/includes');
 include 'copyright.php'; ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -1,3 +1,6 @@
+<?php
+$siteroot ="http://localhost/php_Lynda_cursus/example.com/phptest_environment/introducingphp/ch07/07_03";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

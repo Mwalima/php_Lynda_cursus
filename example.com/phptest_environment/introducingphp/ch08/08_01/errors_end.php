@@ -1,5 +1,5 @@
 <?php
-$siteroot = '/introducingphp/ch08/08_01';
+$siteroot = '/php_Lynda_cursus/example.com/phptest_environment/introducingphp/ch08/08_01';
 include './includes/copyright.php'; ?>
 <!DOCTYPE html>
 <html lang="en">

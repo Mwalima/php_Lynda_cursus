@@ -1,34 +1,21 @@
+<?php
+$siteroot = "/php_Lynda_cursus/example.com/phptest_environment/introducingphp/ch07/07_05";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<link rel="stylesheet" href="../css/style.css">
-<title>Roux Conference: Register</title>
-<meta name="author" content="Designed by Ray Villalobos for Lynda.com">
-<meta name="Copyright" content="Copyright Lynda.com 2012. All Rights Reserved.">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../css/style.css">
+  <title>Roux Conference: Register</title>
+  <meta name="author" content="Designed by Ray Villalobos for Lynda.com">
+  <meta name="Copyright" content="Copyright Lynda.com 2012. All Rights Reserved.">
 </head>
 <body id="page_register">
 <div class="wrapper">
-  <header>
-    <div class="branding"> <img src="../images/ralogo_monogram.png" alt="Logo">
-      <p>Roux Academy<br>
-        Art • Media • Design</p>
-    </div>
-    <div class="description">
-      <h1>Roux Academy 2016 Art Conference</h1>
-      <p>Join over 500 hundred of the most creative and brilliant minds of art colleges all around the world for five days of lectures by world-renowned art scholars and artists, and seven days and nights of gallery exhibits featuring the best in contemporary art, including painting, sculpture, and more, in the beautiful halls of Hotel Contempo in the heart of Seattle.</p>
-    </div>
-    <nav>
-      <ol>
-        <li><a href="../index.php">HOME</a></li>
-        <li><a href="../artists.php">ARTISTS</a></li>
-        <li><a href="../schedule/index.php">SCHEDULE</a></li>
-        <li><a href="../venue.php">VENUE/TRAVEL</a></li>
-        <li><a href="index.php">REGISTER</a></li>
-      </ol>
-    </nav>
-  </header>
-  <div id="rotator"> <img src="../images/art01.jpg" alt="Artwork from show"> </div>
+  <?php
+  require '../includes/header.php';
+  ?>
+
   <!-- Rotator -->
   <section id="main">
     <article>
@@ -36,7 +23,7 @@
       <p>To attend the Roux Academy 2016 Contemporary Art Conference, please complete the information below. </p>
     </article>
     <!-- About the event -->
-    
+
     <article id="registrationform">
       <form method="POST" enctype="text/plain">
         <fieldset>
@@ -91,7 +78,7 @@
     </article>
   </section>
   <!-- maincontent -->
-  
+
   <aside id="sidebar">
     <article id="artistlist">
       <h2>Featured Artists</h2>
@@ -111,20 +98,7 @@
         <p><a class="link" href="../artists.php">Artist Info</a></p>
       </div>
     </article>
-    <!-- Featured Artists -->    <!-- Coming to event --> 
+    <!-- Featured Artists -->    <!-- Coming to event -->
   </aside>
   <!-- Sidebar -->
-  <footer>
-    <div class="branding"> <img src="../images/ralogo_monogram.png" alt="Logo"> </div>
-    <div class="description">Join over 500 hundred of the most creative and brilliant minds of art colleges all around the world for three days of lectures by world-renowned art scholars and artists.</div>
-    <nav>
-      <ol>
-        <li><a href="http://rouxacademy.com/about/about.htm">About the Roux Academy</a></li>
-        <li><a href="http://rouxacademy.com/privacy.htm">Privacy Policy</a></li>
-        <li><a href="http://rouxacademy.com/index.htm">Visit our website</a></li>
-      </ol>
-    </nav>
-  </footer>
-</div>
-</body>
-</html>
+  <?php require '../includes/footer.php';

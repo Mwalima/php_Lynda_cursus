@@ -21,3 +21,11 @@ function getCopywright($startYear)
         return "&copy; $startYear";
     }
 }
+
+if (($timestamp = strtotime($this->value)) === false) {
+    $this->value;
+}else {
+    if ($this->value != null || $this->value != "") {
+        $nlFormat = date($this->php_date_placeholder, strtotime($this->value));
+    }
+}

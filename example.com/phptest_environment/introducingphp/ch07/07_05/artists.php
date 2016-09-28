@@ -1,6 +1,19 @@
 <?php
-global $includes_path;
-require "header.php";
+$siteroot = "/php_Lynda_cursus/example.com/phptest_environment/introducingphp/ch07/07_05";
+?>
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Roux Conference</title>
+    <meta name="author" content="Designed by Ray Villalobos for Lynda.com">
+    <meta name="Copyright" content="Copyright Lynda.com 2012. All Rights Reserved.">
+  </head>
+<body id="page_home">
+<div class="wrapper">
+<?php
+require './includes/header.php';
 ?>
   <!-- Rotator -->
   <section id="main">
@@ -53,7 +66,7 @@ require "header.php";
 
   </section>
   <!-- maincontent -->
-  
+
   <aside id="sidebar">
     <article>
       <h2>The Art</h2>
@@ -70,7 +83,7 @@ require "header.php";
           <li><img src="images/art/Riley_Rewington_tn.jpg" alt="Art from Riley Rewington"></li>
           <li><img src="images/art/Xhou_Ta_tn.jpg" alt="Art from Xhou Ta"></li>
         </ul>
-</div>
+      </div>
     </article>
     <!-- Featured Artists -->
     <article id="comingtoevent">
@@ -80,9 +93,7 @@ require "header.php";
       <p><img src="images/iphone.png" alt="Mobile phone"></p>
       <p><a class="link" href="#">Roux mobile</a></p>
     </article>
-    <!-- Coming to event --> 
+    <!-- Coming to event -->
   </aside>
   <!-- Sidebar -->
-<?php
-require "footer.php";
-?>
+<?php require './includes/footer.php'?>

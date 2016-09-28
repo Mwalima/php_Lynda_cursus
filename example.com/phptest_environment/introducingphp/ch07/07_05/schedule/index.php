@@ -1,6 +1,19 @@
 <?php
-global $includes_path;
-include "/header.php";
+$siteroot = "/php_Lynda_cursus/example.com/phptest_environment/introducingphp/ch07/07_05";
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../css/style.css">
+  <title>Roux Conference: Schedule</title>
+  <meta name="author" content="Designed by Ray Villalobos for Lynda.com">
+  <meta name="Copyright" content="Copyright Lynda.com 2012. All Rights Reserved.">
+</head>
+<body id="page_schedule">
+<div class="wrapper">
+  <?php
+require '../includes/header.php'
 ?>
   <!-- Rotator -->
   <section id="main">
@@ -9,7 +22,7 @@ include "/header.php";
       <p>With over 35 seminars and 60 exhibits at this year’s Roux Academy CAC, there is truly something for every art student. Learn about color, light, and texture; see spray paint tagging in a new light, as a breath-taking 20 ft high graffiti wall is built before your very eyes over the course of the week; and rub paint brushes with some of the most talented artists in the world.</p>
     </article>
     <!-- schedule -->
-    
+
     <section id="monday" class="schedule">
       <div class="dayinfo">
         <h3>Monday, March 7, 2016</h3>
@@ -30,7 +43,7 @@ include "/header.php";
                 <h6>11:00am-1pm: Victoria Hall</h6>
                 <p>Drawing and painting flowers may seem like a first-year art student’s assignment, but Constance Smith brings depth, shadows, light, and color to new heights with his unique technique of painting on canvas with ceramic glaze. This session is sure to be a hit with mixed media buffs.</p>
               </div>
-              <!-- textinfo --> 
+              <!-- textinfo -->
             </li>
             <li> <img src="../images/artists/Riley_Rewington_tn.jpg" alt="Art in Unexpected Places">
               <div class="textinfo">
@@ -38,15 +51,15 @@ include "/header.php";
                 <h6>2:30-4:00pm: Dennison Hall</h6>
                 <p>Grab your pencils, charcoal, acrylics, watercolors, or whatever painting tools suit your fancy, and participate in the capturing of various still life settings that are staged all around Dennison Hall. You won’t believe the wealth and depth of choices.</p>
               </div>
-              <!-- textinfo --> 
+              <!-- textinfo -->
             </li>
           </ul>
         </div>
-        <!-- events --> 
+        <!-- events -->
       </div>
     </section>
     <!-- monday -->
-    
+
     <section id="tuesday" class="schedule">
       <div class="dayinfo">
         <h3>Tuesday March 8, 2016</h3>
@@ -60,7 +73,7 @@ include "/header.php";
                 <h6>09:30-10:30am: Elizabeth Hall</h6>
                 <p>Jennifer Jerome, a native of New Orleans, whose work has centered around abstract images that depict flooding and rebuilding, will talk about how the floods inspired her artistically, and how, despite the sadness of devastation and lives lost, her work also depicts the hope and togetherness of a community that has persevered.</p>
               </div>
-              <!-- textinfo --> 
+              <!-- textinfo -->
             </li>
             <li> <img src="../images/artists/Jonathan_Ferrar_tn.jpg" alt="Art in Unexpected Places">
               <div class="textinfo">
@@ -68,7 +81,7 @@ include "/header.php";
                 <h6>10:30am-1pm: Fountain of Intrigue</h6>
                 <p>Get on your mittens and earmuffs, and join your fellow artists at the Fountain of Intrigue, in the Hotel Contempo gardens, where the ambient temperature has been turned down to allow the sculpting of ice into the most mysterious and beautiful of shapes. Richard Reed will share his secrets for chiseling ice into a shape that your imagination has envisioned. There is an extra fee of $25 for the rental of the tools needed to sculpt ice, if you plan to participate. And we hope you do!</p>
               </div>
-              <!-- textinfo --> 
+              <!-- textinfo -->
             </li>
             <li> <img src="../images/artists/Hillary_Goldwynn_tn.jpg" alt="Art in Unexpected Places">
               <div class="textinfo">
@@ -76,18 +89,18 @@ include "/header.php";
                 <h6>2:30-4:00pm: Dennison Hall</h6>
                 <p>Hillary Hewitt Goldwynn-Post has been inspiring deep sea divers to paint what they experience under water for nearly two decades. Not only does he explain texture, color, and tools, be he also explains methods for capturing your under sea explorations in your mind for future expulsion onto canvas.</p>
               </div>
-              <!-- textinfo --> 
+              <!-- textinfo -->
             </li>
           </ul>
         </div>
-        <!-- events --> 
+        <!-- events -->
       </div>
     </section>
-    <!-- tuesday --> 
-    
+    <!-- tuesday -->
+
   </section>
   <!-- maincontent -->
-  
+
   <aside id="sidebar">
     <article id="artistlist">
       <h2>Featured Artists</h2>
@@ -119,5 +132,5 @@ include "/header.php";
   </aside>
   <!-- Sidebar -->
 <?php
-require "footer.php";
+require "../includes/footer.php";
 ?>

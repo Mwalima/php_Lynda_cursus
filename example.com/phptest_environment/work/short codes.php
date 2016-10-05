@@ -21,17 +21,17 @@ function test(int $i) : string {
 
 test('jdj');
 
-if(true){
+if($var=true){
     echo '1';
-    $truevar = '1';
+    $var= '1';
 }else {
-    $truevar = false;
+    $var= false;
 
 }
-if($truevar){
-    $truevar = '2';
+if($var= false){
+    $var= '2';
 }else{
-    $truevar ='3';
+    $var= '3';
 }
 
 $var = (true ? '1' : false) ? '2' : '3';

@@ -10,9 +10,7 @@ function isSuspect($value,$patern,&$suspect){
             isSuspect($item, $patern, $suspect);
 
             }
-        }
-
-    }else{
+        }else{
         $suspect = true;
     }
 

@@ -1,11 +1,7 @@
 <?php
-// Assume the input contains nothing suspect
 $suspect = false;
-// Regular expression to search for suspect phrases
 $pattern = '/Content-type:|Bcc:|Cc:/i';
 
-// Recursive function that checks for suspect phrases
-// Third argument is passed by reference
 function isSuspect($value, $pattern, &$suspect) {
     if (is_array($value)) {
         foreach ($value as $item) {
@@ -18,13 +14,9 @@ function isSuspect($value, $pattern, &$suspect) {
     }
 }
 
-// Check the $_POST array for suspect phrases
 isSuspect($_POST, $pattern, $suspect);
 
-// Process the form only if no suspect phrases are found
 if (!$suspect) :
-    // Check that required fields have been filled in,
-    // and reassign expected elements to simple variables
     foreach ($_POST as $key => $value) {
         $value = is_array($value) ? $value : trim($value);
         if (empty($value) && in_array($key, $required)) {
@@ -34,4 +26,18 @@ if (!$suspect) :
             $$key = $value;
         }
     }
+    //validate users emaili
+    if(!$missing && !empty($email)):
+        $validemail = filter_input(INPUT_POST,'email',FILTER_VALIDATE_EMAIL);
+        if($validemail){
+            $headers[] = "Reply-to: $validemail";
+        }else{
+            $errors['email'] = true;
+        }
+    endif;
+    //if no errors create headers and message body
+    if(!$errors && !$missing){
+        $headers = implode("\r\n",$headers);
+    }
+
 endif;

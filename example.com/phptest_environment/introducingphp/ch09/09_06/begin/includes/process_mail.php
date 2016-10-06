@@ -26,4 +26,18 @@ if (!$suspect) :
             $$key = $value;
         }
     }
+    //validate users emaili
+    if(!$missing && !empty($email)):
+        $validemail = filter_input(INPUT_POST,'email',FILTER_VALIDATE_EMAIL);
+            if($validemail){
+                $headers[] = "Reply-to: $validemail";
+            }else{
+                $errors['email'] = true;
+            }
+    endif;
+    //if no errors create headers and message body
+    if(!$errors && !$missing){
+        $headers = implode("\r\n",$headers);
+    }
+
 endif;

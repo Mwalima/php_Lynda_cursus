@@ -1,6 +1,12 @@
 <?php
 $errors = [];
 $missing = [];
+
+if(isset($_POST['send'])){
+    $expected = ['name','email','comment'];
+    $required = ['name','comments'];
+    require './includes/process_mail.php';
+}
 ?>
 <!doctype html>
 <html lang="en">

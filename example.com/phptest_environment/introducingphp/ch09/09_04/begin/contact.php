@@ -17,7 +17,9 @@ if (isset($_POST['send'])) {
 
 <body>
 <h1>Contact Us</h1>
-<?php if ($errors || $missing) : ?>
+<?php if ($_POST && $suspect): ?>
+<p class="warning">Sorry, your mail couldn` t be sent!</p>
+<?php elseif ($errors || $missing) : ?>
 <p class="warning">Please fix the item(s) indicated</p>
 <?php endif; ?>
 <form method="post" action="<?= $_SERVER['PHP_SELF']; ?>">
@@ -27,7 +29,13 @@ if (isset($_POST['send'])) {
         <span class="warning">Please enter your name</span>
     <?php endif; ?>
     </label>
-    <input type="text" name="name" id="name">
+    <input type="text" name="name" id="name"
+           <?php
+    if($errors || $missing) {
+     echo "value='$name'";
+    }
+    ?>
+    >
   </p>
   <p>
     <label for="email">Email:

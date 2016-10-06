@@ -80,7 +80,7 @@ if (isset($_POST['send'])) {
     <?php
     if ($_POST && $mailSent) {
         echo "Message: \n\n";
-        echo htmlentities($message);
+        echo htmlentities($missing);
         echo "Headers: \n\n";
         echo htmlentities($headers);
     }

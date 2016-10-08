@@ -2,16 +2,56 @@
 $errors = [];
 $missing = [];
 if (isset($_POST['send'])) {
-    $expected = ['name', 'email', 'comments'];
-    $required = ['name', 'comments'];
-    $to = 'David Powers <david@example.com>';
+    require_once './connect/mysqldb.php';
+    require './includes/functions.php';
+    require './swiftmailer/lib/swift_required.php';
+    $str = 'm.peltenburg@gmail.com';
+    trim($str);
+    $transport = Swift_SmtpTransport::newInstance('smtp.gmail.com', 465, "ssl")
+        ->setUsername('m.peltenburg@gmail.com')
+        ->setPassword('fhtxbggriemtseot');
+
+    $expected = ['firstname', 'lastname','email', 'comments'];
+    $required = ['firstname', 'comments'];
+    $to = 'Mwalima Peltenburg <m.peltenburg@gmail.com>';
     $subject = 'Feedback from online form';
     $headers = [];
     $headers[] = 'From: webmaster@example.com';
     $headers[] = 'Cc: another@example.com';
     $headers[] = 'Content-type: text/plain; charset=utf-8';
     $authorized = null;
-    require './includes/process_mail.php';
+    $body = "Hello this is a test mail";
+
+    $mailer = Swift_Mailer::newInstance($transport);
+
+
+    $message = Swift_Message::newInstance();
+    $message->setTo($to);
+
+    $message->setSubject($subject . date('F Y'));
+    $message->setBody($body);
+
+    $message->setFrom($str, $subject);
+    //$message->attach(Swift_Attachment::fromPath("path/to/file/file.zip"));
+
+    $ok = $mailer->send($message);
+    // versturen
+    if (!$ok) {
+        echo "De mail is niet goed verstuurd!<br>";
+
+        // Wis de mailadressen weer
+    }else {
+        $db_handle = DBConnect::getInstance();
+        $insert = new Mysql($db_handle);
+        $insert->insertPerson($_POST['firstname'],$_POST['lastname'], $_POST['email']);
+
+
+        require './includes/process_mail.php';
+        if ($mailSend) {
+            header(['Location: thanks.php']);
+            exit;
+        }
+    }
 }
 ?>
 <!doctype html>
@@ -24,19 +64,19 @@ if (isset($_POST['send'])) {
 
 <body>
 <h1>Contact Us</h1>
-<?php if ($_POST && $suspect) : ?>
+<?php if ($_POST && ($suspect || isset($errors['mailfail']))) : ?>
 <p class="warning">Sorry, your mail couldn't be sent.</p>
 <?php elseif ($errors || $missing) : ?>
 <p class="warning">Please fix the item(s) indicated</p>
 <?php endif; ?>
 <form method="post" action="<?= $_SERVER['PHP_SELF']; ?>">
   <p>
-    <label for="name">Name:
-    <?php if ($missing && in_array('name', $missing)) : ?>
+    <label for="firstname">fistname:
+    <?php if ($missing && in_array('firstname', $missing)) : ?>
         <span class="warning">Please enter your name</span>
     <?php endif; ?>
     </label>
-    <input type="text" name="name" id="name"
+    <input type="text" name="firstname" id="firstname"
         <?php
         if ($errors || $missing) {
             echo 'value="' . htmlentities($name) . '"';
@@ -44,6 +84,19 @@ if (isset($_POST['send'])) {
         ?>
         >
   </p>
+    <label for="lastname">lastname:
+        <?php if ($missing && in_array('lastname', $missing)) : ?>
+            <span class="warning">Please enter your name</span>
+        <?php endif; ?>
+    </label>
+    <input type="text" name="lastname" id="lastname"
+        <?php
+        if ($errors || $missing) {
+            echo 'value="' . htmlentities($name) . '"';
+        }
+        ?>
+    >
+    </p>
   <p>
     <label for="email">Email:
         <?php if ($missing && in_array('email', $missing)) : ?>
@@ -76,15 +129,6 @@ if (isset($_POST['send'])) {
     <input type="submit" name="send" id="send" value="Send Comments">
   </p>
 </form>
-<pre>
-    <?php
-    if ($_POST && $mailSent) {
-        echo "Message: \n\n";
-        echo htmlentities($missing);
-        echo "Headers: \n\n";
-        echo htmlentities($headers);
-    }
-    ?>
-</pre>
+
 </body>
 </html>

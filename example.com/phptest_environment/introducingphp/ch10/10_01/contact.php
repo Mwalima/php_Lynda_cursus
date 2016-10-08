@@ -1,9 +1,10 @@
 <?php
 $errors = [];
 $missing = [];
+
 if (isset($_POST['send'])) {
-    $expected = ['name', 'email', 'comments'];
-    $required = ['name', 'comments'];
+    $expected = ['name', 'email', 'comments', 'gender'];
+    $required = ['name', 'comments','gender'];
     $to = 'David Powers <david@example.com>';
     $subject = 'Feedback from online form';
     $headers = [];
@@ -11,6 +12,9 @@ if (isset($_POST['send'])) {
     $headers[] = 'Cc: another@example.com';
     $headers[] = 'Content-type: text/plain; charset=utf-8';
     $authorized = null;
+    if(!isset($_POST['gender'])){
+        $_POST['gender'] = '';
+    }
     require './includes/process_mail.php';
 }
 ?>
@@ -73,13 +77,31 @@ if (isset($_POST['send'])) {
           ?></textarea>
   </p>
   <fieldset>
-    <legend>Gender: </legend>
+    <legend>Gender:
+    <?php if ($missing && in_array('gender', $missing)):?>
+        <span class="warning">You forgot to select an option</span>
+        <?php endif; ?>
+    </legend>
       <p>
-        <input type="radio" name="gender" value="female" id="gender_f">
+
+        <input type="radio" name="gender" value="female" id="gender_f"
+          <?php if ($_POST && $gender == 'female'):
+              echo "checked"?>
+
+          <?php endif; ?>
+        >
         <label for="gender_f">Female</label>
-        <input type="radio" name="gender" value="male" id="gender_m">
+        <input type="radio" name="gender" value="male" id="gender_m"
+          <?php if ($_POST && $gender == 'male'):
+              echo "checked"?>
+               <?php endif; ?>
+        >
         <label for="gender_m">Male</label>
-        <input type="radio" name="gender" value="won't say" id="gender_0">
+        <input type="radio" name="gender" value="won't say" id="gender_0"
+          <?php if (!$_POST || $gender == "won't say"):
+              echo "checked"?>
+          <?php endif; ?>
+          >
         <label for="gender_0">Rather not say</label>
       </p>
   </fieldset>

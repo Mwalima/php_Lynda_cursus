@@ -64,6 +64,9 @@ if (!$suspect) :
             $message .= ucfirst($field) . ": $val\r\n\r\n";
         endforeach;
         $message = wordwrap($message, 70);
-        $mailSent = true;
+        $mailSent = mail($to,$subject, $message, $headers, $authorized);
+    if(!$mailSent){
+        $errors['mailfail'] = true;
+    }
     endif;
 endif;

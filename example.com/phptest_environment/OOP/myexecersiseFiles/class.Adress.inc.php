@@ -4,6 +4,18 @@
  * Physical address.
  */
 class Address {
+
+    const ADDRESS_TYPE_RESIDENCE = 1;
+    const ADDRESS_TYPE_BUSINESS = 2;
+    const ADDRESS_TYPE_PARK = 3;
+
+    // Address types.
+    static public $valid_address_types = array(
+        Address::ADDRESS_TYPE_RESIDENCE => 'Residence',
+        Address::ADDRESS_TYPE_BUSINESS => 'Business',
+        Address::ADDRESS_TYPE_PARK => 'Park',
+    );
+
     // Street address.
     public $street_address_1;
     public $street_address_2;
@@ -23,20 +35,37 @@ class Address {
     // Primary key of an Address.
     protected $_address_id;
 
+    // Address type id.
+    protected $_address_type_id;
+
     // When the record was created and last updated.
     protected $_time_created;
     protected $_time_updated;
 
-
     /**
-     * Address constructor.
-     * @param array $date optional array of property name and value
+     * Constructor.
+     * @param array $data Optional array of property names and values.
      */
-    function __construct($data = array())
-    {
+    function __construct($data = array()) {
         $this->_time_created = time();
-        if(!is_array($data)){
-            trigger_error("unable to construct adress with a" . get_class($name));
+
+        // Ensure that the Address can be populated.
+        if (!is_array($data)) {
+            trigger_error('Unable to construct address with a ' . get_class($name));
+        }
+
+        // If there is at least one value, populate the Address with it.
+        if (count($data) > 0) {
+            foreach ($data as $name => $value) {
+                // Special case for protected properties.
+                if (in_array($name, array(
+                    'time_created',
+                    'time_updated',
+                ))) {
+                    $name = '_' . $name;
+                }
+                $this->$name = $value;
+            }
         }
     }
 
@@ -68,6 +97,11 @@ class Address {
      * @param mixed $value
      */
     function __set($name, $value) {
+        // Only set valid address type id.
+        if ('_address_type_id' == $name) {
+            $this->_setAddressTypeId($value);
+            return;
+        }
         // Allow anything to set the postal code.
         if ('postal_code' == $name) {
             $this->$name = $value;
@@ -76,6 +110,14 @@ class Address {
 
         // Unable to access property; trigger error.
         trigger_error('Undefined or unallowed property via __set(): ' . $name);
+    }
+
+    /**
+     * Magic __toString.
+     * @return string
+     */
+    function __toString() {
+        return $this->display();
     }
 
     /**
@@ -110,5 +152,24 @@ class Address {
         $output .= $this->country_name;
 
         return $output;
+    }
+
+    /**
+     * Determine if an address type is valid.
+     * @param int $address_type_id
+     * @return boolean
+     */
+    static public function isValidAddressTypeId($address_type_id) {
+        return array_key_exists($address_type_id, self::$valid_address_types);
+    }
+
+    /**
+     * If valid, set the address type id.
+     * @param int $address_type_id
+     */
+    protected function _setAddressTypeId($address_type_id) {
+        if (self::isValidAddressTypeId($address_type_id)) {
+            $this->_address_type_id = $address_type_id;
+        }
     }
 }

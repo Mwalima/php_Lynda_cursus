@@ -35,7 +35,7 @@ class Address {
     // Primary key of an Address.
     protected $_address_id;
 
-    // Address type id.
+    // protected address type id.
     protected $_address_type_id;
 
     // When the record was created and last updated.

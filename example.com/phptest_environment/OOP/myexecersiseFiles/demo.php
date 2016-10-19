@@ -22,6 +22,7 @@ $address->postal_code = '2563GP';
 $address->city_name = 'Den Haag';
 $address->subdivision_name = 'Zuid-Holland';
 $address->country_name = 'Nederland';
+// calling an protected
 $address->address_type_id = 1;
 echo '<tt><pre>'. var_export($address, TRUE) . '</pre></tt>';
 

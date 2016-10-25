@@ -8,9 +8,14 @@ error_reporting(E_ALL);
  * Date: 9-10-16
  * Time: 12:36
  */
-require 'class.Adress.inc.php';
 
-
+/**
+ * define autoloader to load classfiles automatically instead of require everything
+ * @param $class_name
+ */
+function __autoload($class_name){
+    include 'class.'.$class_name.'.inc';
+}
 echo '<h2> Instantiating Adress</h2>';
 $address = new Address;
 
@@ -47,7 +52,7 @@ echo "<h2>To string</h2>";
 echo $construct_addres;
 
 echo "<h2>Static property</h2>";
-echo '<pre><tt>'.var_export($construct_addres::$valid_adress_types,true).'</pre></tt>';
+echo '<pre>'.var_export($construct_addres::$valid_adress_types,true).'</pre>';
 
 echo "<h2>Constanten</h2>";
 for($id=0;$id< count($construct_addres::$valid_adress_types);$id++) {

@@ -24,7 +24,7 @@
 		<div id="main" class="wrapper clearfix">
 			
       <article>
-        <?php require_once 'demo.php'; ?>
+        <?php require 'demo.php'; ?>
       </article>
 			
 		</div> <!-- #main -->

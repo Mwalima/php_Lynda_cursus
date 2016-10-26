@@ -3,13 +3,13 @@ $total = 155.99;
 $delivery = 10;
 
 switch($total) {
-    case < 50:
+    case $delivery< 50:
         echo 'Total (including delivery): ' . $total += $delivery;
         break;
-    case < 100:
+    case $delivery< 100:
         echo 'Total (including delivery): ' . $total += $delivery/2;
         break;
-    case >= 100:
+    case $delivery>= 100:
         echo 'Total (free delivery): ' . $total;
 
 }

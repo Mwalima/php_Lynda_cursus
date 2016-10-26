@@ -129,7 +129,7 @@ class Address {
         $db = Database::getInstance();
         $PDO = $db->getConnection();
         
-        $sql_query = 'Select '
+        $sql_query = 'Select MyGuests FROM leerphp';
     }
 
     /**

@@ -126,7 +126,10 @@ class Address {
      * @return string
      */
     protected function _postal_code_guess() {
-        return 'LOOKUP';
+        $db = Database::getInstance();
+        $PDO = $db->getConnection();
+        
+        $sql_query = 'Select '
     }
 
     /**

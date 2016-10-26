@@ -1,6 +1,6 @@
 <?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
+//ini_set('display_errors', 1);
+//ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 /**
  * Created by PhpStorm.
@@ -22,7 +22,7 @@ $address->postal_code = '2563GP';
 $address->city_name = 'Den Haag';
 $address->subdivision_name = 'Zuid-Holland';
 $address->country_name = 'Nederland';
-// calling an protected
+// calling an protected methode
 $address->address_type_id = 1;
 echo '<tt><pre>'. var_export($address, TRUE) . '</pre></tt>';
 
@@ -30,6 +30,8 @@ echo '<h2> Display adress</h2>';
 echo $address->display();
 
 echo "<h2>Display protected access</h2>";
+unset ($address->postal_code);
+echo $address;
 
 echo "<h2>Testing magic __get and __set</h2>";
 //overloading means to create a property dynamically that hassn`t been declared
@@ -47,12 +49,20 @@ echo "<h2>To string</h2>";
 echo $construct_addres;
 
 echo "<h2>Static property</h2>";
-echo '<pre><tt>'.var_export($construct_addres::$valid_adress_types,true).'</pre></tt>';
+//echo '<pre><tt>'.var_export(Address::$valid_adress_types,TRUE).'</pre></tt>';
 
-echo "<h2>Constanten</h2>";
-for($id=0;$id< count($construct_addres::$valid_adress_types);$id++) {
+echo "<h2>Testing valid type id trough static function with constant key</h2>";
+$number_of_items = count(Address::$valid_address_types);
+for($id=0;$id< $number_of_items;$id++) {
     echo "<div>$id:";
     echo Address::isValidAddressTypeId($id) ? 'valid' : 'invalid';
     echo "</div>";
 }
 
+require_once 'connect/mysqldb.php';
+require 'functions/MyGuests.class.php';
+
+$db_handle = DBConnect::getInstance();
+
+$show_table = new MyGuests($db_handle);
+echo $show_table->myGuests_selectRows();

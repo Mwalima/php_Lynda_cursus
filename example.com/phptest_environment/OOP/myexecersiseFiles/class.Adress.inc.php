@@ -129,7 +129,10 @@ class Address {
         $db = Database::getInstance();
         $PDO = $db->getConnection();
         
-        $sql_query = 'Select MyGuests FROM leerphp';
+        $sql_query = 'Select address FROM OOP';
+        $string_name = $PDO->quote($this->city_name);
+        
+        $sql_query.='WHERE city_name ="'.$string_name.'" ';
     }
 
     /**

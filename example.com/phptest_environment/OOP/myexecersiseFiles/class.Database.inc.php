@@ -28,8 +28,8 @@ class Database{
     public function __construct()
     {        
         try {
-    $this->_connection = new PDO('mysql:host=localhost;dbname=leerphp', 'root', 'm=191976');
-        echo "Connected to MyGuest<p>";
+    $this->_connection = new PDO('mysql:host=localhost;dbname=OOP', 'root', 'm=191976');
+        echo "Connected to address<p>";
         //error handling
     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     } catch (PDOException $e) {

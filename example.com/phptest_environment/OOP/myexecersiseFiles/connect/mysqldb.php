@@ -5,7 +5,7 @@ class DBConnect {
 
 	private function DBConnect() {
 		try {
-			$this->dbh = new PDO('mysql:host=localhost;dbname=leerphp', 'root', 'm=191976');
+			$this->dbh = new PDO('mysql:host=localhost;dbname=OOP', 'root', '');
                          echo "Connected to MyGuest<p>";
 			$this->dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
 

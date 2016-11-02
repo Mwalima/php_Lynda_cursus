@@ -1,51 +1,44 @@
 <?php
+
 /**
- * Created by PhpStorm.
- * User: mwalima
- * Date: 23-10-16
- * Time: 16:15
+ * MySQLi database; only one connection is allowed. 
  */
-class Database{
-    private $_connection;
-
-    private static $_instance;
-
-    /**
-     * get an instance of the database
-     * @return Database
-     *
-     */
-    public static function getInstance(){
-        if(!self::$_instance){
-            self::$_instance = new self();
-        }
-        return self::getInstance();
+class Database {
+  private $_connection;
+  // Store the single instance.
+  private static $_instance;
+  
+  /**
+   * Get an instance of the Database.
+   * @return Database 
+   */
+  public static function getInstance() {
+    if (!self::$_instance) {
+      self::$_instance = new self();
     }
-
-    /**
-     * constructor
-     */
-    public function __construct()
-    {        
-        try {
-    $this->_connection = new PDO('mysql:host=localhost;dbname=OOP', 'root', 'm=191976');
-        echo "Connected to address<p>";
-        //error handling
-    $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    } catch (PDOException $e) {
-        echo 'Connection failed: ' . $e->getMessage();
+    return self::$_instance;
+  }
+  
+  /**
+   * Constructor 
+   */
+  public function __construct() {
+    $this->_connection = new mysqli('localhost', 'root', '', 'OOP');
+    // Error handling.
+    if (mysqli_connect_error()) {
+      trigger_error('Failed to connect to MySQL: ' . mysqli_connect_error(), E_USER_ERROR);
     }
-
-    }
-    /*
-     * Empty clone magic method to prevent application
-     */
-    private function __clone() {}
-    
-    /**
-     * Get the PDO connection
-     */
-    public function getConnection(){
-        return $this->_connection;
-    }
+  }
+  
+  /**
+   * Empty clone magic method to prevent duplication. 
+   */
+  private function __clone() {}
+  
+  /**
+   * Get the mysqli connection. 
+   */
+  public function getConnection() {
+    return $this->_connection;
+  }
 }

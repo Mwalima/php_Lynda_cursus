@@ -9,5 +9,16 @@
  * Class AddressPark
  */
 class AddressPark extends Address {
+    /**
+     *overriding class
+     * @var type string
+     */
+    public $country_name = "Australia";
+    /**
+     * initialization
+     */
+     protected function _init() {
+        $this->_setAddressTypeId(Address::ADDRESS_TYPE_PARK);
+    }
 
 }

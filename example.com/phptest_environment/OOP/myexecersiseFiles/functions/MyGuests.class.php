@@ -5,7 +5,7 @@
  * Date: 19-10-16
  * Time: 19:18
  */
-class MyGuests{
+class OOP{
 
     public $dbh;
 
@@ -14,13 +14,13 @@ class MyGuests{
         $this->dbh=$dbHandle;
     }
 
-    public function myGuests_selectRows(){
+    public function OOP_select_rows(){
 
-        $sql = ('Select * From MyGuests');
+        $sql = ('Select * From OOP');
         $result = $this->dbh->query($sql);
         foreach ($result as $row) {
 
-            $table= $row['firstname'].", ".$row['lastname']." ,".$row['email'].",".$row['reg_date']."<br>";
+            $table= $row['street_address_1'].", ".$row['city_name']." ,".$row['postal_code'].",".$row['time_created']."<br>";
             return $table;
         }
 

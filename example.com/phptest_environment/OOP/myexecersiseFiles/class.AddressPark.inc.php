@@ -9,11 +9,14 @@
  * Class AddressPark
  */
 class AddressPark extends Address {
-    /**
-     *overriding class
-     * @var type string
-     */
-    public $country_name = "Australia";
+   
+    public function display(){        
+        $output = '<div style="background-color:PaleGreen;">';
+        $output .= parent::display();
+        $output .="</div>";
+        return $output;
+                
+    }
     /**
      * initialization
      */

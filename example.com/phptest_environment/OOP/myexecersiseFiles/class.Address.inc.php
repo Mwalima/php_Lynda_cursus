@@ -41,7 +41,15 @@ abstract class Address implements Model{
     // When the record was created and last updated.
     protected $_time_created;
     protected $_time_updated;
-
+        /**
+       * Post clone behavior
+       */
+      public function __clone() {
+          $this->_time_created = time();
+          $this->_time_updated = NULL;
+      }
+    
+    
     /**
      * Constructor.
      * @param array $data Optional array of property names and values.
@@ -191,11 +199,12 @@ abstract class Address implements Model{
    * load an address
    * prevents that a child class can override a method can not be extended
    * @param int $address_id   */
-  final public function load($address_id){}
+  final static public function load($address_id){}
   
   /**
    * save an address
    * @param 
    */
   final public function save() {}
+  
 }

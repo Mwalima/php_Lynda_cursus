@@ -32,10 +32,18 @@ echo "<tt><pre>".var_export($address_business, TRUE)."</pre></tt>";
 
 echo "<h2> Instantiating AddressPark</h2>";
 $address_park = new AddressPark(array(
-    'street address_1'=>'2562XM',
+    'street_address_1'=>'2562XM',
     'street_address_2'=>'suite 2',
-    'city_name'=>'Den Haag'
+    'city_name'=>'Den Haag',
+    'country_name'=>'Australia'
 ));
 
 echo $address_park;
 echo "<tt><pre>".var_export($address_park, TRUE)."</pre></tt>";
+
+       
+echo '<h2>Cloning AddressPark</h2>';
+$address_park_clone = clone $address_park;
+echo '<tt><pre>' . var_export($address_park_clone, TRUE) . '</pre></tt>';
+echo '$address_park_clone is ' . ($address_park == $address_park_clone ?
+  '' : 'not ') . ' a copy of $address_park.';

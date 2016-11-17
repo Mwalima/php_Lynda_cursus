@@ -1,6 +1,6 @@
 <?php
 ini_set('display_errors', '1');
-$characters = ['Arthur Dent', 'Ford Prefect', 'Zaphod Beeblebrox', 'Marvin, 'Slartibartfast'];
+$characters = ['Arthur Dent', 'Ford Prefect', 'Zaphod Beeblebrox', 'Marvin', 'Slartibartfast'];
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -3,7 +3,7 @@
 /**
  * Physical address.
  */
-class Address {
+abstract class Address implements Model{
 
     const ADDRESS_TYPE_RESIDENCE = 1;
     const ADDRESS_TYPE_BUSINESS = 2;
@@ -41,12 +41,21 @@ class Address {
     // When the record was created and last updated.
     protected $_time_created;
     protected $_time_updated;
-
+        /**
+       * Post clone behavior
+       */
+      public function __clone() {
+          $this->_time_created = time();
+          $this->_time_updated = NULL;
+      }
+    
+    
     /**
      * Constructor.
      * @param array $data Optional array of property names and values.
      */
-    function __construct($data = array()) {
+    public function __construct($data = array()) {
+        $this->_init();
         $this->_time_created = time();
 
         // Ensure that the Address can be populated.
@@ -97,17 +106,12 @@ class Address {
      * @param mixed $value
      */
     function __set($name, $value) {
-        // Only set valid address type id.
-        if ('_address_type_id' == $name) {
-            $this->_setAddressTypeId($value);
-            return;
-        }
+        
         // Allow anything to set the postal code.
         if ('postal_code' == $name) {
             $this->$name = $value;
             return;
         }
-
         // Unable to access property; trigger error.
         trigger_error('Undefined or unallowed property via __set(): ' . $name);
     }
@@ -119,16 +123,34 @@ class Address {
     function __toString() {
         return $this->display();
     }
-
+    /**
+     * Force extending classes to implement init method.
+     */
+    abstract protected function _init();
     /**
      * Guess the postal code given the subdivision and city name.
      * @todo Replace with a database lookup.
      * @return string
      */
     protected function _postal_code_guess() {
-        return 'LOOKUP';
+    $db = Database::getInstance();
+    $mysqli = $db->getConnection();
+    
+    $sql_query  = 'SELECT postal_code ';
+    $sql_query .= 'FROM location ';
+    
+    $city_name = $mysqli->real_escape_string($this->city_name);
+    $sql_query .= 'WHERE city_name = "' . $city_name . '" ';
+    
+    $subdivision_name = $mysqli->real_escape_string($this->subdivision_name);
+    $sql_query .= 'AND subdivision_name = "' . $subdivision_name . '" ';
+    
+    $result = $mysqli->query($sql_query);
+    
+    if ($row = $result->fetch_assoc()) {
+      return $row['postal_code'];
     }
-
+  }
     /**
      * Display an address in HTML.
      * @return string
@@ -164,12 +186,25 @@ class Address {
     }
 
     /**
-     * If valid, set the address type id.
-     * @param int $address_type_id
-     */
-    protected function _setAddressTypeId($address_type_id) {
-        if (self::isValidAddressTypeId($address_type_id)) {
-            $this->_address_type_id = $address_type_id;
-        }
+   * If valid, set the address type id.
+   * @param int $address_type_id 
+   */
+  protected function _setAddressTypeId($address_type_id) {
+    if (self::isValidAddressTypeId($address_type_id)) {
+      $this->_address_type_id = $address_type_id;
     }
+  }
+  
+  /**
+   * load an address
+   * prevents that a child class can override a method can not be extended
+   * @param int $address_id   */
+  final static public function load($address_id){}
+  
+  /**
+   * save an address
+   * @param 
+   */
+  final public function save() {}
+  
 }

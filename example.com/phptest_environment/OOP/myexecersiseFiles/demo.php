@@ -14,7 +14,7 @@ error_reporting(E_ALL);
  * @param $class_name
  */
 function __autoload($class_name){
-    include 'class.'.$class_name.'.inc';
+    include 'class.'.$class_name.'.inc.php';
 }
 echo '<h2> Instantiating Adress</h2>';
 $address = new Address;

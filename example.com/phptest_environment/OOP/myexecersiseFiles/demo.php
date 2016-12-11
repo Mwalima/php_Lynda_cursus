@@ -30,7 +30,7 @@ $address_business = new AddressBusiness(array(
 //echo $address_business;
 //echo "<tt><pre>".var_export($address_business, TRUE)."</pre></tt>";
 //
-//echo "<h2> Instantiating AddressPark</h2>";
+echo "<h2> Instantiating AddressPark</h2>";
 $address_park = new AddressPark(array(
     'street_address_1'=>'2562XM',
     'street_address_2'=>'suite 2',
@@ -38,18 +38,18 @@ $address_park = new AddressPark(array(
     'country_name'=>'Australia'
 ));
 //
-//echo $address_park;
+echo $address_park;
 //echo "<tt><pre>".var_export($address_park, TRUE)."</pre></tt>";
 //
-//echo "<h2> clone AddressPark</h2>";
-//$clone_addres_park = clone $address_park;
-//echo "<tt><pre>".var_export($clone_addres_park, TRUE)."</pre></tt>";
-//echo '$clone_addres_park is'.($address_park == $clone_addres_park ?
-//        ' ': 'not ').'a copy of $address_park';
+echo "<h2> clone AddressPark</h2>";
+$clone_addres_park = clone $address_park;
+echo "<tt><pre>".var_export($clone_addres_park, TRUE)."</pre></tt>";
+echo '$clone_addres_park is'.($address_park == $clone_addres_park ?
+        ' ': ' not ').'a copy of $address_park';
 //
 //referencing an object to save memory usage
 //echo '<h2>Copying AddressBusiness reference</h2>';
-//$address_business_copy = $address_business;
+//$address_business_copy = &$address_business;
 //echo '$address_business_copy is ' . ($address_business === $address_business_copy ?
 //  '' : 'not ') . ' a copy of $address_business.';
 //
@@ -62,16 +62,18 @@ $address_park = new AddressPark(array(
 //echo '<br/>$address_business_copy is ' . ($address_business_copy instanceof
 //AddressBusiness ? '' : 'not ') . ' an AddressBusiness.';
 
-//echo "<h2>Typecating to an object</h2>";
-//$test_object = (object)12345;
-//echo "<tt><pre>".var_export($test_object, TRUE)."</pre></tt>";
+echo "<h2>Typecating to an object</h2>";
+$test_object = (object)12345;
+echo "<tt><pre>".var_export($test_object, TRUE)."</pre></tt>";
 
-//try {
-//    echo "<h2>fetch an object from database</h2>";
-//$db_object = Address::load(1);
-//echo "<tt><pre>".var_export($db_object, TRUE)."</pre></tt>";
-//    
-//} catch (ExceptionAddress $ex) {
-//    
-//    echo $ex;
-//}
+echo $test_object->scalar;
+
+try {
+    echo "<h2>fetch an object from database</h2>";
+$db_object = Address::load(1);
+echo "<tt><pre>".var_export($db_object, TRUE)."</pre></tt>";
+    
+} catch (ExceptionAddress $ex) {
+    
+    echo $ex;
+}

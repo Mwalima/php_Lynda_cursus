@@ -1,8 +1,3 @@
-package com.example.java;
-
-import java.util.ArrayList;
-import java.util.List;
-
 public class Main {
 
     public static void main(String[] args) {
@@ -17,17 +12,6 @@ public class Main {
         for ( String word:words) {
             System.out.println(word);
         }
-
-        System.out.println(args[0]);
-
-        List<String>somelist = new ArrayList<String>();
-        somelist.add("monkey");
-        somelist.add("donkey");
-        somelist.add("skeleton");
-
-        for (String item : somelist){
-            System.out.println(item);
-        }
-        }
-
+	System.out.println(args[0]);
+	}
 }

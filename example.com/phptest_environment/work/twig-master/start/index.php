@@ -66,22 +66,37 @@ $twig = new Twig_Environment($loader, array(
     // Uncomment the line below to cache compiled templates
     // 'cache' => __DIR__.'/../cache',
 ));
-$name = filter_input(INPUT_GET, 'name', FILTER_SANITIZE_STRING);
-if (!$name) {
-    $name = "Mercury, Venus, Mars, Jupiter, Saturn, Uranus & Neptune.";
-}
-$dir    = __DIR__.'/assets/images/';
+
+$dir    ='./assets/images/';
+
 $images = scandir($dir);
+//var_dump($images);
+unset($images[0],$images[1]);
+
+$names = array('Penguin Dress','Sportstar Penguin','Angel Costume','Penguin Accessories','Super Cool Penguin','Gray');
+
+for($i = 2; $i < count($images)-1 ; $i++){
+$products = array(
+    new Product($names[$i],$images[$i]));
 
 
-//$images = array(
-//    new Product('Serious Businessman', 'formal.png'),
-//    new Product('Penguin Dress', 'dress.png'),
-//    new Product('Sportstar Penguin', 'sports.png'),
-//    new Product('Angel Costume', 'angel-costume.png'),
-//    new Product('Penguin Accessories', 'swatter.png'),
-//    new Product('Super Cool Penguin', 'super-cool.png'),
-//);
+}
+
+
+foreach ($products as $product) {
+  foreach ($product as $key => $value) {
+    $product[$key][] = $value;
+  }
+}
+$products = array(
+    new Product('Serious Businessman', 'formal.png'),
+    new Product('Penguin Dress', 'dress.png'),
+    new Product('Sportstar Penguin', 'sports.png'),
+    new Product('Angel Costume', 'angel-costume.png'),
+    new Product('Penguin Accessories', 'swatter.png'),
+    new Product('Super Cool Penguin', 'super-cool.png'),
+);
+
 
 
 echo $twig->render('homepage.twig', array(
@@ -90,13 +105,6 @@ echo $twig->render('homepage.twig', array(
                 'summary'  => 'You\'re <strong>hip</strong>, you\'re cool, you\'re a penguin! Now, start dressing like one! Find the latest suits, bow-ties, swim shorts and other outfits here!',
                 'hasSale'  => 1,
             ),
-    'products' => array(
-                'Serious Businessman',
-                'Penguin Dress',
-                'Sportstar Penguin',
-                'Angel Costume',
-                'Penguin Accessories',
-                'Super Cool Penguin',
-            ),
+    'products' => $names,
     'images'=> $images,
     ));

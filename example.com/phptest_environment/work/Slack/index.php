@@ -112,6 +112,7 @@ function do_action( $slack, $action ) {
 	}
 
 	return $result_message;
+	
 }
 
 /**

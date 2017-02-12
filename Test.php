@@ -10,6 +10,10 @@ class Test extends PHPUnit_Framework_TestCase
             $message = "hallo";
             $this->assertStringStartsWith($message, 'hallo');
         }
+        
+        public function testRequestAction(){
+            $this->assertStringStartsWith($_REQUEST['action'],'oauth');
+        }
 }
 
 ?>

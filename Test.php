@@ -8,7 +8,7 @@ class Test extends PHPUnit_Framework_TestCase
         
         public function testOauth(){
             $message = "hallo";
-            $this->assertStringStartsWith('prefix', 'foo');
+            $this->assertStringStartsWith($message, 'hallo');
         }
 }
 

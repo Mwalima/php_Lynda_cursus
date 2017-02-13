@@ -1,15 +1,4 @@
 <?php
-/**
- * A simple example script for calling the Slack API.
- *
- * This example saves the access token and related information in a simple
- * text file in the same directory with the script. Please notice that this
- * approach is for demonstration purposes only and not suited for real
- * applications.
- *
- * @author Jarkko Laine <jarkko@jarkkolaine.com>
- */
-
 // Define Slack application identifiers
 // Even better is to put these in environment variables so you don't risk exposing
 // them to the outer world (e.g. by committing to version control)
@@ -28,10 +17,8 @@ require_once 'slack-interface/class-slack-api-exception.php';
 use Slack_Interface\Slack;
 use Slack_Interface\Slack_API_Exception;
 
-//
 // HELPER FUNCTIONS
 //
-
 /**
  * Initializes the Slack handler object, loading the authentication
  * information from a text file. If the text file is not present,
@@ -46,18 +33,13 @@ function initialize_slack_interface() {
 	} else {
 		$access_string = '{}';
 	}
-
 	// Decode the access data into a parameter array
 	$access_data = json_decode( $access_string, true );
-
 	$slack = new Slack( $access_data );
-
 	// Register slash commands
 	$slack->register_slash_command( '/joke', 'slack_command_joke' );
-
 	return $slack;
 }
-
 /**
  * Executes an application action (e.g. 'send_notification').
  *
@@ -68,14 +50,11 @@ function initialize_slack_interface() {
  */
 function do_action( $slack, $action ) {
 	$result_message = '';
-
 	switch ( $action ) {
-
 		// Handles the OAuth callback by exchanging the access code to
 		// a valid token and saving it in a file
 		case 'oauth':
 			$code = $_GET['code'];
-
 			// Exchange code to valid access token
 			try {
 				$access = $slack->do_oauth( $code );
@@ -87,11 +66,9 @@ function do_action( $slack, $action ) {
 				$result_message = $e->getMessage();
 			}
 			break;
-
 		// Sends a notification to Slack
 		case 'send_notification':
 			$message = isset( $_REQUEST['text'] ) ? $_REQUEST['text'] : 'Hello!';
-
 			try {
 				$slack->send_notification( $message );
 				$result_message = 'Notification sent to Slack channel.';
@@ -99,22 +76,17 @@ function do_action( $slack, $action ) {
 				$result_message = $e->getMessage();
 			}
 			break;
-
 		// Responds to a Slack slash command. Notice that commands are registered
 		// at Slack initialization.
 		case 'command':
 			$slack->do_slash_command();
 			break;
-
 		default:
 			break;
-
 	}
-
 	return $result_message;
 
 }
-
 /**
  * A simple slash command that returns a random joke to the Slack channel.
  *
@@ -129,34 +101,28 @@ function slack_command_joke() {
 		"I would love to change the world, but they won’t give me the source code.",
 		"Programming today is a race between software engineers striving to build bigger and better idiot-proof programs, and the Universe trying to produce bigger and better idiots. So far, the Universe is winning."
 	);
-
 	$joke_number = rand( 0, count( $jokes ) - 1 );
-
 	return array(
 		'response_type' => 'in_channel',
 		'text' => $jokes[$joke_number],
 	);
 }
-
 //
 // MAIN FUNCTIONALITY
 //
-
 // Setup the Slack handler
 $slack = initialize_slack_interface();
-
 // If an action was passed, execute it before rendering the page layout
 $result_message = '';
+var_dump($slack);
 if ( isset( $_REQUEST['action'] ) ) {
+    echo "yes where in";
 	$action = $_REQUEST['action'];
-	$result_message = do_action( $slack, $action );
+	$result_message = do_action( $slack, 'oauth');
 }
-
-
 //
 // PAGE LAYOUT
 //
-
 ?>
 <html>
 	<head>
@@ -167,12 +133,10 @@ if ( isset( $_REQUEST['action'] ) ) {
 				font-family: Helvetica, sans-serif;
 				padding: 20px;
 			}
-
 			.notification {
 				padding: 20px;
 				background-color: #fafad2;
 			}
-
 			input {
 				padding: 10px;
 				font-size: 1.2em;
@@ -190,18 +154,18 @@ if ( isset( $_REQUEST['action'] ) ) {
 			</p>
 		<?php endif; ?>
 
-		<?php // if ( $slack->is_authenticated() ) : ?>
+		<?php if ( $slack->is_authenticated() ) : ?>
 			<form action="" method="post">
 				<input type="hidden" name="action" value="send_notification"/>
 				<p>
 					<input type="text" name="text" placeholder="Type your notification here and press enter to send." />
 				</p>
 			</form>
-		<?php //else : ?>
+		<?php else : ?>
 			<p>
 				<a href="https://slack.com/oauth/authorize?scope=incoming-webhook,commands&client_id=<?php echo $slack->get_client_id(); ?>"><img alt="Add to Slack" height="40" width="139" src="https://platform.slack-edge.com/img/add_to_slack.png" srcset="https://platform.slack-edge.com/img/add_to_slack.png 1x, https://platform.slack-edge.com/img/add_to_slack@2x.png 2x"></a>
 			</p>
-		<?php //endif; ?>
+		<?php endif; ?>
 
 	</body>
 </html>

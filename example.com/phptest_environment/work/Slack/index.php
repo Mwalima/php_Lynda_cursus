@@ -49,43 +49,44 @@ function initialize_slack_interface() {
  *
  * @return string   A result message to show to the user
  */
-function do_action($slack, $action) {
-    $result_message = '';
-    switch ($action) {
-        // Handles the OAuth callback by exchanging the access code to
-        // a valid token and saving it in a file
-        case 'oauth':
-            $code = $_GET['code'];
-            // Exchange code to valid access token
-            try {
-                $access = $slack->do_oauth($code);
-                if ($access) {
-                    file_put_contents('access.txt', $access->to_json());
-                    $result_message = 'The application was successfully added to your Slack channel';
-                }
-            } catch (Slack_API_Exception $e) {
-                $result_message = $e->getMessage();
-            }
-            break;
-        // Sends a notification to Slack
-        case 'send_notification':
-            $message = isset($_REQUEST['text']) ? $_REQUEST['text'] : 'Hello!';
-            try {
-                $slack->send_notification($message);
-                $result_message = 'Notification sent to Slack channel.';
-            } catch (Slack_API_Exception $e) {
-                $result_message = $e->getMessage();
-            }
-            break;
-        // Responds to a Slack slash command. Notice that commands are registered
-        // at Slack initialization.
-        case 'command':
-            $slack->do_slash_command();
-            break;
-        default:
-            break;
-    }
-    return $result_message;
+function do_action( $slack, $action ) {
+	$result_message = '';
+	switch ( $action ) {
+		// Handles the OAuth callback by exchanging the access code to
+		// a valid token and saving it in a file
+		case 'oauth':
+			$code = $_GET['code'];
+			// Exchange code to valid access token
+			try {
+				$access = $slack->do_oauth( $code );
+				if ( $access ) {
+					file_put_contents( 'access.txt', $access->to_json() );
+					$result_message = 'The application was successfully added to your Slack channel';
+				}
+			} catch ( Slack_API_Exception $e ) {
+				$result_message = $e->getMessage();
+			}
+			break;
+		// Sends a notification to Slack
+		case 'send_notification':
+			$message = isset( $_REQUEST['text'] ) ? $_REQUEST['text'] : 'Hello!';
+			try {
+				$slack->send_notification( $message );
+				$result_message = 'Notification sent to Slack channel.';
+			} catch ( Slack_API_Exception $e ) {
+				$result_message = $e->getMessage();
+			}
+			break;
+		// Responds to a Slack slash command. Notice that commands are registered
+		// at Slack initialization.
+		case 'command':
+			$slack->do_slash_command();
+			break;
+		default:
+			break;
+	}
+	return $result_message;
+
 }
 
 /**

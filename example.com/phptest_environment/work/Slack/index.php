@@ -155,7 +155,6 @@ if (isset($_REQUEST['action'])) {
             <?php echo $result_message; ?>
             </p>
 <?php endif; ?>
-
 <?php if ($slack->is_authenticated()) : ?>
             <form action="" method="post">
                 <input type="hidden" name="action" value="send_notification"/>

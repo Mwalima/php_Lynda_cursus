@@ -12,8 +12,8 @@ class Test extends PHPUnit_Framework_TestCase
         }
         
         public function testRequestAction(){
-            $message = 'oauth';//$_REQUEST['action'];
-            $this->assertStringStartsWith($message,'oauth');
+            $_REQUEST['action']='oauth';
+            $this->assertStringStartsWith($_REQUEST['action'],'oauth');
         }
 }
 

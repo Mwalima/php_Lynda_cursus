@@ -117,10 +117,8 @@ function slack_command_joke() {
 $slack = initialize_slack_interface();
 // If an action was passed, execute it before rendering the page layout
 $result_message = '';
-
 if (isset($_REQUEST['action'])) {
-    echo "yes where in";
-    $action = 'hasdfsd';//$_REQUEST['action'];
+    $action = $_REQUEST['action'];
      $result_message = do_action($slack, $action);
 }
 //
@@ -150,11 +148,14 @@ if (isset($_REQUEST['action'])) {
     <body>
         <h1>Slack Integration Example</h1>
 
-        <?php if ($result_message) : ?>
+        <?php
+        if ($result_message == '') { ?>
             <p class="notification">
-            <?php echo $result_message; ?>
+            <?php
+            echo $result_message; ?>
             </p>
-<?php endif; ?>
+            <?php }else{ echo "hello"; }?>
+<?php //endif; ?>
 
 <?php if ($slack->is_authenticated()) : ?>
             <form action="" method="post">

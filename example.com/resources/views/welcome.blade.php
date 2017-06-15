@@ -63,6 +63,7 @@
                 margin-bottom: 30px;
             }
         </style>
+        <link rel="stylesheet" href="<?php echo asset('css/main.css'); ?>" type="text/css">
     </head>
     <body>
         <div class="flex-center position-ref full-height">
@@ -79,15 +80,43 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
-                </div>
+                    <div class="main_page">
+                        <div class="page_header floating_element">
+                            {{'breadcrumbs'}}
+                            <span class="floating_element"> </span>
+                        </div>
+                        <div class="table_of_contents floating_element">
+                            <div class="section_header section_header_grey">
+                                <h3 class="highlight">Inhoud</h3>
+                            </div>
+                            <div class="table_of_contents_item floating_element">
+                                <a href="../../app/phptest_environment/work/phpini.php">phpinfo</a>
+                            </div>
+                            <div class="table_of_contents_item floating_element">
+                                <a href="/php_Lynda_cursus/example.com/phptest_environment/work/">Work</a>
+                            </div>
+                            <div class="table_of_contents_item floating_element">
+                                <a href="/php_Lynda_cursus/example.com/phptest_environment/">Course</a>
+                            </div>
+                            <div class="table_of_contents_item floating_element">
+                                <a href="#files">Config files</a>
+                            </div>
+                        </div>
 
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                        <div class="content_section floating_element">
+
+
+                            <div class="section_header section_header_red">
+                                <div id="about"></div>
+                                It works!
+                            </div>
+                            <div class="content_section_text">
+                                <p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="validator">
+                    </div>
                 </div>
             </div>
         </div>

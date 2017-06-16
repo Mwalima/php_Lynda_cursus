@@ -22,25 +22,26 @@
     </ul>
   </nav>
 </header>
-        {{--{{ Form::open(array('action' => 'Controller@method')) }}--}}
+    <div class="breadcrumbs"><a href="{!! Breadcrumbs::addCrumb(url()->current(), url()->current()) !!}</a></div>
 <div id="contentWrapper">
   <article id="mainContent">
     <h1>Sign Up!</h1>
     <article class="post">
       <h2>New User Registration</h2>
-{{ Form::open(array('url' => 'http://full.url/here')) }}
-{{--{{Form::label('email', 'Email Address')}}--}}
-{{--{{Form::text('email')}}--}}
+{{ Form::open(array('url' => 'register')) }}
 
-{{--{{Form::label('username', 'Username')}}--}}
-{{--{{Form::text('username')}}--}}
+{{Form::label('email', 'Email Address')}}
+{{Form::text('email')}}
 
-{{--{{Form::label('password', 'password')}}--}}
-{{--{{Form::password('password')}}--}}
+{{Form::label('username', 'Username')}}
+{{Form::text('username')}}
 
-{{--{{Form::submit('Sign Up')}}--}}
+{{Form::label('password', 'password')}}
+{{Form::password('password')}}
 
-{{Form::close}}
+{{Form::submit('Sign Up')}}
+
+{{Form::close()}}
 
 </article>
   </article>

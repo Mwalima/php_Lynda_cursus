@@ -9,10 +9,12 @@
         <CLASSES>
           <root url="phar://$MODULE_DIR$/example.com/vendor/phpunit/phpunit/tests/_files/phpunit-example-extension/tools/phpunit.d/phpunit-example-extension-1.0.0.phar/" />
           <root url="phar://$MODULE_DIR$/example.com/composer.phar/" />
+          <root url="phar://$MODULE_DIR$/example.com/tests/phpunit.phar/" />
         </CLASSES>
         <SOURCES>
           <root url="phar://$MODULE_DIR$/example.com/vendor/phpunit/phpunit/tests/_files/phpunit-example-extension/tools/phpunit.d/phpunit-example-extension-1.0.0.phar/" />
           <root url="phar://$MODULE_DIR$/example.com/composer.phar/" />
+          <root url="phar://$MODULE_DIR$/example.com/tests/phpunit.phar/" />
         </SOURCES>
       </library>
     </orderEntry>

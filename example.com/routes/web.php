@@ -18,9 +18,9 @@ Route::get('/', function () {
 
 Route::get('/users', function() {
     App\User::create([
-        'name' => 'Mwalima',
-        'email' => 'asdfsadf@dsfds.nl',
-        'password' => '12qw12qw'
+        'name' => Input::get('username'),
+        'email' => Input::get('email'),
+        'password' => Input::get('password')
     ]);
 
     return response()->json(App\User::all());
@@ -39,7 +39,39 @@ Route::get('about/{theSubject}',function($theSubject){
     return $theSubject.'About content goes here';
 });
 
-Route::get('/register', function(){
-    return view('register');
-}
-);
+
+Route::post('/register', function(){
+    $user = new \App\User();
+    $user->email =Input::get('email');
+    $user->username = Input::get('username');
+    $user->password = Hash::make(Input::get('password'));
+    $user->save();
+    $theEmail = Input::get('email');
+    return View::make('thanks')->with('theEmail', $theEmail);
+
+});
+
+Route::get('login',function(){
+    return View::make('login');
+});
+
+Route::get('logout',function(){
+    return View::make('logout');
+});
+
+Route::get('register', 'RegisterController@showRegister');
+
+Route::get('welcome', function () {return view('welcome');})->name('welcome');
+
+Route::get('register', function () {return view('register');})->name('register');
+
+Route::get('logout', function () {return view('logout');})->name('logout');
+
+Route::get('login', function () {return view('login');})->name('login');
+
+// Home > [Page]
+Route::get('register', 'RegisterController@show')->name('register');
+
+Route::get('login', 'RegisterController@show')->name('login');
+
+Route::get('logout', 'RegisterController@show')->name('logout');

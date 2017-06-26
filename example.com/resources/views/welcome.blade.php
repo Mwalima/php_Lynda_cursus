@@ -77,35 +77,33 @@
                     @endif
                 </div>
             @endif
-
             <div class="content">
                 <div class="title m-b-md">
                     <div class="main_page">
                         <div class="page_header floating_element">
-                            {{'breadcrumbs'}}
-                            <span class="floating_element"> </span>
+                            <img src="<?php echo asset('_images/accent1.jpg'); ?>">
                         </div>
+                        <div class="breadcrumbs">
+                    @include('components.breadcrumbs')
+                        <span class="floating_element"></span>
                         <div class="table_of_contents floating_element">
                             <div class="section_header section_header_grey">
                                 <h3 class="highlight">Inhoud</h3>
                             </div>
                             <div class="table_of_contents_item floating_element">
-                                <a href="../../app/phptest_environment/work/phpini.php">phpinfo</a>
+                                <a href="/register">registeren</a>
                             </div>
                             <div class="table_of_contents_item floating_element">
-                                <a href="/php_Lynda_cursus/example.com/phptest_environment/work/">Work</a>
+                                <a href="/login">inloggen</a>
                             </div>
                             <div class="table_of_contents_item floating_element">
-                                <a href="/php_Lynda_cursus/example.com/phptest_environment/">Course</a>
+                                <a href="/logout">Uitloggen</a>
                             </div>
                             <div class="table_of_contents_item floating_element">
                                 <a href="#files">Config files</a>
                             </div>
                         </div>
-
                         <div class="content_section floating_element">
-
-
                             <div class="section_header section_header_red">
                                 <div id="about"></div>
                                 It works!

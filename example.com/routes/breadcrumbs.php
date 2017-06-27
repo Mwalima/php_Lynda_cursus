@@ -6,14 +6,17 @@
  * Time: 9:46
  */
 // Home
-//Breadcrumbs::register('crums', function ($breadcrumbs, $page) {
-//    foreach ($page as $k => $v) {
-//        $breadcrumbs->push($k, $v);
-//    }
-//});
-//
-Breadcrumbs::register('crums', function($breadcrumbs, $page) {
-    dd($page);
-    $breadcrumbs->parent('crums');
-    $breadcrumbs->push($page->title, route('crums', $page->id));
+Breadcrumbs::register('welcome', function($breadcrumbs) {
+    $breadcrumbs->push('welcome', route('welcome'));
 });
+
+Breadcrumbs::register('page', function ($breadcrumbs, $page) {
+
+        $breadcrumbs->parent('welcome');
+    //dd($page[0]);
+        foreach ($page as $ancestor) {
+
+            $breadcrumbs->push($ancestor,$ancestor);
+        }
+
+    });

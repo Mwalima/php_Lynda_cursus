@@ -19,17 +19,13 @@ class RegisterController extends Controller
 
     public function create($number = 2)
     {
+        echo '<table><tr>';
         for ($i = 1; $i <= 10; $i++) {
-            echo "$i * $number = " . $i * $number . "<br>";
+            echo "<td>$i * $number = " . $i * $number . "</td></tr>";
         }
+        echo "</table>";
     }
 
-    public function show($page = '')
-    {
-        $currentPath = Route::getFacadeRoot()->current()->uri();
-        $page = $currentPath;
-        return view('register', ['page' => $page]);
-    }
 }
 
 

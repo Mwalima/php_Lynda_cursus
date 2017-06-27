@@ -1,9 +1,7 @@
-{{--@section('content')--}}
-    {{----}}
-{{--@stop--}}
-<form action="paint_form.blade.php" method = "/get">
+<form action="/paint_form" method = "get">
     <input type="hidden">
     {{ csrf_field() }}
-    <input type="text" name="title">
+    Raad het request woord:<input type="text" name="title" value="">
+    {!! $title !!}
     <input type="submit" value="verzenden">
 </form>

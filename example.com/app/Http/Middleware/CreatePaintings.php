@@ -15,9 +15,8 @@ class CreatePaintings
      */
     public function handle($request, Closure $next)
     {
-     //dd($request);
-        if ($request->title == "welcome") {
-            return redirect('welcome');
+        if ($request->title == "paintings") {
+            return redirect('paintings');
         }
         return $next($request);
     }

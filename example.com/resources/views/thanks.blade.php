@@ -6,7 +6,6 @@
       <article class="post">
         <h2>Thanks for registring</h2>
         <p> You`ve registrered {{$theEmail}}</p>
-
   @include('includes.sidebar')
 </div>
 @include('includes.footer')

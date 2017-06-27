@@ -13,11 +13,11 @@
 
 
 Route::get('/', function () {
-    $painting = new \App\Painting();
-    $painting->title = "Heel mooi schilderij";
-    $painting->artist="IkZelf";
-    $painting->year=2017;
-    $painting->save();
+//    $painting = new \App\Painting();
+//    $painting->title = "Heel mooi schilderij";
+//    $painting->artist="IkZelf";
+//    $painting->year=2017;
+//    $painting->save();
 
     return view('welcome');
 });
@@ -74,10 +74,14 @@ Route::get('register/{number?}','RegisterController@create')->where('number', '[
 Route::get('werk', function () {return view('werk');})->name('werk');
 
 Route::group(['middleware' => ['paint']], function() {
-    Route::get('paint_form', "PaintingsController@create");
-    Route::get('paintings', "PaintingsController@index")->name('paintings');
+    Route::get('paint_form', function(){
+        $name = Input::get('title');
+        return view('paint_form')->with('title',$name);
+    });
+
 });
+
 Route::get('thanks', function () {return view('thanks');})->name('thanks');
-Route::get('paint_form', function(){
-    return view('paint_form');
-});
+
+
+Route::get('paintings', "PaintingsController@jasonOutput")->name('paintings');

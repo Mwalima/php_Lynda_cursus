@@ -94,10 +94,10 @@ article {
 	clear: both;
 	margin-bottom: 3px;
 }
-a {
-	color: white;
-	text-decoration: none;
-}
+/*a {*/
+	/*color: white;*/
+	/*text-decoration: none;*/
+/*}*/
 a:hover {
 	background: url(../_images/diag_pattern.png);
 }

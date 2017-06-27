@@ -17,7 +17,7 @@ class Painting extends Model {
 
 
         foreach ($paintings as $painting){
-            echo $painting->title;
+            echo $painting->title."</br>";
         }
     }
 }

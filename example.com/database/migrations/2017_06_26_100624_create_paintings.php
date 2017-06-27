@@ -19,6 +19,7 @@ class CreatePaintings extends Migration
             $thePainting->string('title',500);
             $thePainting->text('description');
             $thePainting->integer('year');
+            $thePainting->string('image');
             $thePainting->timestamps();
         });
     }

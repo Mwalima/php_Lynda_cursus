@@ -1,27 +1,16 @@
 @include('includes.head')
 <div id="contentWrapper">
+    <table>
         <div class="section_header section_header_grey">
-            <h3 class="highlight">Inhoud</h3>
+            <h2>Inhoud</h2>
         </div>
-        <div class="table_of_contents_item floating_element">
-            <a href="/register">registeren</a>
-        </div>
-        <div class="table_of_contents_item floating_element">
-            <a href="/login">inloggen</a>
-        </div>
-        <div class="table_of_contents_item floating_element">
-            <a href="/logout">Uitloggen</a>
-        </div>
-        <div class="table_of_contents_item floating_element">
-            <a href="/werk">Werk</a>
-        </div>
-        <div class="table_of_contents_item floating_element">
-            <a href="/paintings">Paintings</a>
-        </div>
-        <div class="table_of_contents_item floating_element">
-            <a href="/config">config</a>
-        </div>
-
+        <tr><td><a href="/register">registeren</a></td></tr>
+        <tr><td><a href="/login">inloggen</a></td></tr>
+        <tr><td><a href="/logout">Uitloggen</a></td></tr>
+        <tr><td><a href="/werk">Werk</a></td></tr>
+        <tr><td><a href="/paintings">Paintings</a></td></tr>
+        <tr><td><a href="/config">config</a></td></tr>
+    </table>
     @include('includes.sidebar')
 </div>
 @include('includes.footer')

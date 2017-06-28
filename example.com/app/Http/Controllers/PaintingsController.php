@@ -17,11 +17,7 @@ class PaintingsController extends Controller
     {
         $paintings = \App\Painting::all();
 
+        return view("paintings")->with(['paintings'=>$paintings]);
 
-//        foreach ($paintings as $painting) {
-            $painting = json_decode($paintings);
-
-            return view("paintings")->with(array('paintings'=>$painting));
-//        }
     }
 }

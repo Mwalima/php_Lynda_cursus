@@ -2,38 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="89596392-4e8f-4673-8a67-778980536ba2" name="Default" comment="setting up docker and composer">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example.com/resources/assets/sass/_welcome.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/example.com/public/_images/feature2.jpg" afterPath="$PROJECT_DIR$/example.com/public/_images/monalisa.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/example.com/public/_images/feature5.jpg" afterPath="$PROJECT_DIR$/example.com/public/_images/rembrand.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/example.com/public/_images/feature7.jpg" afterPath="$PROJECT_DIR$/example.com/public/_images/ikzelf.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/example.com/composer.phar" afterPath="$PROJECT_DIR$/example.com/composer.phar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/php.xml" afterPath="$PROJECT_DIR$/.idea/php.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/example.com/.phpstorm.meta.php" afterPath="$PROJECT_DIR$/example.com/.phpstorm.meta.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/example.com/_ide_helper.php" afterPath="$PROJECT_DIR$/example.com/_ide_helper.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/example.com/app/Http/Controllers/PaintingsController.php" afterPath="$PROJECT_DIR$/example.com/app/Http/Controllers/PaintingsController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/example.com/app/Http/Middleware/CreatePaintings.php" afterPath="$PROJECT_DIR$/example.com/app/Http/Middleware/CreatePaintings.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/example.com/app/Models/Painting.php" afterPath="$PROJECT_DIR$/example.com/app/Models/Painting.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/example.com/composer.json" afterPath="$PROJECT_DIR$/example.com/composer.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/example.com/composer.lock" afterPath="$PROJECT_DIR$/example.com/composer.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/example.com/database/migrations/2017_06_26_100624_create_paintings.php" afterPath="$PROJECT_DIR$/example.com/database/migrations/2017_06_26_100624_create_paintings.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/example.com/public/_css/main.css" afterPath="$PROJECT_DIR$/example.com/public/_css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/example.com/public/css/app.css" afterPath="$PROJECT_DIR$/example.com/public/css/app.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/example.com/public/css/main.css" afterPath="$PROJECT_DIR$/example.com/public/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/example.com/public/index.php" afterPath="$PROJECT_DIR$/example.com/public/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/example.com/public/js/app.js" afterPath="$PROJECT_DIR$/example.com/public/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/example.com/resources/assets/sass/app.scss" afterPath="$PROJECT_DIR$/example.com/resources/assets/sass/app.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/example.com/resources/views/components/breadcrumbs.blade.php" afterPath="$PROJECT_DIR$/example.com/resources/views/components/breadcrumbs.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/example.com/resources/views/logout.blade.php" afterPath="$PROJECT_DIR$/example.com/resources/views/logout.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/example.com/resources/views/paint_form.blade.php" afterPath="$PROJECT_DIR$/example.com/resources/views/paint_form.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/example.com/resources/views/paintings.blade.php" afterPath="$PROJECT_DIR$/example.com/resources/views/paintings.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/example.com/resources/views/register.blade.php" afterPath="$PROJECT_DIR$/example.com/resources/views/register.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/example.com/resources/views/thanks.blade.php" afterPath="$PROJECT_DIR$/example.com/resources/views/thanks.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/example.com/resources/views/welcome.blade.php" afterPath="$PROJECT_DIR$/example.com/resources/views/welcome.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/example.com/routes/web.php" afterPath="$PROJECT_DIR$/example.com/routes/web.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/example.com/vendor/composer/autoload_classmap.php" afterPath="$PROJECT_DIR$/example.com/vendor/composer/autoload_classmap.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/example.com/vendor/composer/autoload_files.php" afterPath="$PROJECT_DIR$/example.com/vendor/composer/autoload_files.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/example.com/vendor/composer/autoload_psr4.php" afterPath="$PROJECT_DIR$/example.com/vendor/composer/autoload_psr4.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/example.com/vendor/composer/autoload_static.php" afterPath="$PROJECT_DIR$/example.com/vendor/composer/autoload_static.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/example.com/vendor/composer/installed.json" afterPath="$PROJECT_DIR$/example.com/vendor/composer/installed.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/example.com/vendor/autoload.php" afterPath="$PROJECT_DIR$/example.com/vendor/autoload.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/example.com/vendor/composer/ClassLoader.php" afterPath="$PROJECT_DIR$/example.com/vendor/composer/ClassLoader.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/example.com/vendor/composer/LICENSE" afterPath="$PROJECT_DIR$/example.com/vendor/composer/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/example.com/vendor/composer/autoload_real.php" afterPath="$PROJECT_DIR$/example.com/vendor/composer/autoload_real.php" />
     </list>
     <ignored path="php_Lynda_cursus.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -67,8 +48,8 @@
       <file leaf-file-name="web.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/example.com/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="888">
-              <caret line="85" column="0" lean-forward="true" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
+            <state relative-caret-position="1368">
+              <caret line="85" column="0" lean-forward="false" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
               <folding>
                 <element signature="e#7#389#0#PHP" expanded="true" />
               </folding>
@@ -80,27 +61,29 @@
         <entry file="file://$PROJECT_DIR$/example.com/app/Http/Controllers/PaintingsController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="414">
-              <caret line="24" column="11" lean-forward="true" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="11" />
+              <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+              <folding>
+                <element signature="e#40#57#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="welcome.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/example.com/resources/views/welcome.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="1" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="15" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="paintings.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="paintings.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/example.com/resources/views/paintings.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="25" column="34" lean-forward="true" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="head.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/example.com/resources/views/includes/head.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="7" column="13" lean-forward="true" selection-start-line="5" selection-start-column="4" selection-end-line="7" selection-end-column="13" />
+            <state relative-caret-position="504">
+              <caret line="28" column="10" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -109,8 +92,18 @@
       <file leaf-file-name="register.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/example.com/resources/views/register.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="21" column="26" lean-forward="false" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
+            <state relative-caret-position="504">
+              <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ExampleTest.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/example.com/tests/Unit/ExampleTest.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="17" column="32" lean-forward="true" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -121,16 +114,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="324">
               <caret line="18" column="28" lean-forward="false" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Painting.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/example.com/app/Models/Painting.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="19" column="17" lean-forward="false" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -157,15 +140,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>DaveJame</find>
-      <find>DaveJames</find>
-      <find>DaveJamesM</find>
-      <find>DaveJamesMille</find>
-      <find>DaveJamesMiller</find>
-      <find>DaveJamesMiller\</find>
-      <find>Home</find>
-      <find>register</find>
-      <find>home</find>
       <find>psr</find>
       <find>Route</find>
       <find>ge</find>
@@ -187,6 +161,15 @@
       <find>bootstrap</find>
       <find>breadc</find>
       <find>PaintingsController</find>
+      <find>p</find>
+      <find>php</find>
+      <find>phpunit</find>
+      <find>phpunit.</find>
+      <find>phpunit.p</find>
+      <find>phpunit.ph</find>
+      <find>phpunit.pha</find>
+      <find>phpunit.phar</find>
+      <find>phpuni</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -232,7 +215,6 @@
         <option value="$PROJECT_DIR$/example.com/resources/views/components/authenticate.blade.php" />
         <option value="$PROJECT_DIR$/example.com/package.json" />
         <option value="$PROJECT_DIR$/example.com/resources/views/welcome.blade.php" />
-        <option value="$PROJECT_DIR$/example.com/composer.json" />
         <option value="$PROJECT_DIR$/example.com/public/index.php" />
         <option value="$PROJECT_DIR$/example.com/resources/views/hello.php" />
         <option value="$PROJECT_DIR$/example.com/public/_css/style.scss" />
@@ -246,11 +228,12 @@
         <option value="$PROJECT_DIR$/example.com/app/Models/Painting.php" />
         <option value="$PROJECT_DIR$/example.com/app/Http/Middleware/CreatePaintings.php" />
         <option value="$PROJECT_DIR$/example.com/routes/web.php" />
-        <option value="$PROJECT_DIR$/example.com/app/Http/Controllers/PaintingsController.php" />
-        <option value="$PROJECT_DIR$/example.com/resources/views/register.blade.php" />
         <option value="$PROJECT_DIR$/example.com/resources/views/thanks.blade.php" />
         <option value="$PROJECT_DIR$/example.com/resources/views/includes/head.blade.php" />
         <option value="$PROJECT_DIR$/example.com/resources/views/paintings.blade.php" />
+        <option value="$PROJECT_DIR$/example.com/app/Http/Controllers/PaintingsController.php" />
+        <option value="$PROJECT_DIR$/example.com/composer.json" />
+        <option value="$PROJECT_DIR$/example.com/resources/views/register.blade.php" />
       </list>
     </option>
   </component>
@@ -298,10 +281,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="Remote PHP 5.6" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="47" />
-    <option name="y" value="-4" />
-    <option name="width" value="1873" />
-    <option name="height" value="1204" />
+    <option name="x" value="46" />
+    <option name="y" value="-11" />
+    <option name="width" value="1875" />
+    <option name="height" value="1212" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -334,6 +317,35 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="php_Lynda_cursus">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="php_Lynda_cursus">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="example.com">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -357,6 +369,86 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="example.com" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="php_Lynda_cursus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="php_Lynda_cursus" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="example.com" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="php_Lynda_cursus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="php_Lynda_cursus" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="example.com" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="phpunit" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="php_Lynda_cursus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="php_Lynda_cursus" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="example.com" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tests" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="php_Lynda_cursus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="php_Lynda_cursus" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="example.com" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tests" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Unit" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -550,28 +642,6 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="_images" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="php_Lynda_cursus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="php_Lynda_cursus" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="example.com" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="database" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -656,138 +726,17 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="php_Lynda_cursus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="php_Lynda_cursus" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="example.com" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Models" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="php_Lynda_cursus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="php_Lynda_cursus" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="example.com" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Http" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="php_Lynda_cursus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="php_Lynda_cursus" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="example.com" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Http" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Middleware" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="php_Lynda_cursus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="php_Lynda_cursus" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="example.com" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Console" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="php_Lynda_cursus">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="php_Lynda_cursus">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="example.com">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="composer&#9;FILE&#9;file:///home/mwalima/workspace/php_Lynda_cursus/example.com/composer.json&#10;package.json&#9;FILE&#9;file:///home/mwalima/workspace/php_Lynda_cursus/example.com/package.json&#10;ker&#9;null&#9;null&#10;registe&#9;FILE&#9;file:///home/mwalima/workspace/php_Lynda_cursus/example.com/app/Http/Controllers/RegisterController.php&#10;breadcrumbs.blade.php&#9;FILE&#9;file:///home/mwalima/workspace/php_Lynda_cursus/example.com/resources/views/components/breadcrumbs.blade.php&#10;compo&#9;FILE&#9;file:///home/mwalima/workspace/php_Lynda_cursus/example.com/composer.json&#10;RegisterController&#9;FILE&#9;file:///home/mwalima/workspace/php_Lynda_cursus/example.com/app/Http/Controllers/RegisterController.php&#10;composer.json&#9;FILE&#9;file:///home/mwalima/workspace/php_Lynda_cursus/example.com/composer.json&#10;RouteCollection&#9;null&#9;null&#10;config/breadcrumbs.php&#9;FILE&#9;file:///home/mwalima/workspace/php_Lynda_cursus/example.com/config/breadcrumbs.php&#10;regis&#9;FILE&#9;file:///home/mwalima/workspace/php_Lynda_cursus/example.com/resources/views/register.blade.php&#10;app&#9;FILE&#9;file:///home/mwalima/workspace/php_Lynda_cursus/example.com/config/app.php&#10;twig&#9;FILE&#9;file:///home/mwalima/workspace/php_Lynda_cursus/example.com/phptest_environment/work/twig-master/finish/templates/_banner.twig&#10;mail&#9;FILE&#9;file://C:/xampp/htdocs/php_Lynda_cursus/example.com/phptest_environment/introducingphp/ch09/09_10/mail_test.php" />
-    <property name="settings.editor.selected.configurable" value="watcher.settings" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../kinky" />
+    <property name="SearchEverywhereHistoryKey" value="register&#9;FILE&#9;file:///home/mwalima/workspace/php_Lynda_cursus/example.com/resources/views/register.blade.php&#10;comp&#9;FILE&#9;file:///home/mwalima/workspace/php_Lynda_cursus/example.com/composer.json&#10;composer&#9;FILE&#9;file:///home/mwalima/workspace/php_Lynda_cursus/example.com/composer.json&#10;package.json&#9;FILE&#9;file:///home/mwalima/workspace/php_Lynda_cursus/example.com/package.json&#10;ker&#9;null&#9;null&#10;registe&#9;FILE&#9;file:///home/mwalima/workspace/php_Lynda_cursus/example.com/app/Http/Controllers/RegisterController.php&#10;breadcrumbs.blade.php&#9;FILE&#9;file:///home/mwalima/workspace/php_Lynda_cursus/example.com/resources/views/components/breadcrumbs.blade.php&#10;compo&#9;FILE&#9;file:///home/mwalima/workspace/php_Lynda_cursus/example.com/composer.json&#10;RegisterController&#9;FILE&#9;file:///home/mwalima/workspace/php_Lynda_cursus/example.com/app/Http/Controllers/RegisterController.php&#10;composer.json&#9;FILE&#9;file:///home/mwalima/workspace/php_Lynda_cursus/example.com/composer.json&#10;RouteCollection&#9;null&#9;null&#10;config/breadcrumbs.php&#9;FILE&#9;file:///home/mwalima/workspace/php_Lynda_cursus/example.com/config/breadcrumbs.php&#10;regis&#9;FILE&#9;file:///home/mwalima/workspace/php_Lynda_cursus/example.com/resources/views/register.blade.php&#10;app&#9;FILE&#9;file:///home/mwalima/workspace/php_Lynda_cursus/example.com/config/app.php&#10;twig&#9;FILE&#9;file:///home/mwalima/workspace/php_Lynda_cursus/example.com/phptest_environment/work/twig-master/finish/templates/_banner.twig&#10;mail&#9;FILE&#9;file://C:/xampp/htdocs/php_Lynda_cursus/example.com/phptest_environment/introducingphp/ch09/09_10/mail_test.php" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/example.com/bootstrap/autoload.php" />
     <property name="node.js.path.for.package.jscs" value="project" />
     <property name="node.js.selected.package.jscs" value="" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -824,7 +773,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="PHPUnit.phpUnit">
+  <component name="RunManager">
     <configuration default="true" type="CodeceptionConfigurationType" factoryName="Codeception">
       <PhpTestRunnerSettings />
       <method />
@@ -863,6 +812,21 @@
       <PhpTestRunnerSettings />
       <method />
     </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="Docker Deployment" server-name="Docker">
+      <deployment type="docker-image">
+        <settings>
+          <option name="JSONFilePath" value="" />
+          <option name="command" value="" />
+          <option name="containerName" value="lynda.docker" />
+          <option name="entrypoint" value="" />
+          <option name="imageTag" value="" />
+          <option name="startBrowserSettings">
+            <browser />
+          </option>
+        </settings>
+      </deployment>
+      <method />
+    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-interpreter>project</node-interpreter>
       <node-options />
@@ -892,13 +856,6 @@
       <recursive>false</recursive>
       <method />
     </configuration>
-    <configuration default="false" name="phpUnit" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
-      <TestRunner directory="$PROJECT_DIR$/example.com/tests" />
-      <method />
-    </configuration>
-    <list size="1">
-      <item index="0" class="java.lang.String" itemvalue="PHPUnit.phpUnit" />
-    </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -947,7 +904,8 @@
       <workItem from="1498050187993" duration="4104000" />
       <workItem from="1498125581943" duration="1209000" />
       <workItem from="1498210972866" duration="5223000" />
-      <workItem from="1498461017931" duration="47421000" />
+      <workItem from="1498461017931" duration="48666000" />
+      <workItem from="1498631184602" duration="4609000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1486737942853</created>
@@ -981,18 +939,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="phpUnit - 2017.06.16 at 15h 48m 17s.xml">
-      <configuration name="phpUnit" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="phpUnit - 2017.06.16 at 15h 49m 34s.xml">
-      <configuration name="phpUnit" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="phpUnit - 2017.06.16 at 15h 50m 23s.xml">
-      <configuration name="phpUnit" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="phpUnit - 2017.06.16 at 15h 50m 26s.xml">
-      <configuration name="phpUnit" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
     <history-entry file="phpUnit - 2017.06.16 at 15h 50m 28s.xml">
       <configuration name="phpUnit" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
@@ -1002,9 +948,30 @@
     <history-entry file="phpUnit - 2017.06.20 at 14h 43m 14s.xml">
       <configuration name="phpUnit" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
+    <history-entry file="phpUnit - 2017.06.28 at 08h 30m 46s.xml">
+      <configuration name="phpUnit" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="phpUnit - 2017.06.28 at 08h 42m 50s.xml">
+      <configuration name="phpUnit" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="phpUnit - 2017.06.28 at 08h 43m 57s.xml">
+      <configuration name="phpUnit" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="phpUnit - 2017.06.28 at 08h 52m 41s.xml">
+      <configuration name="phpUnit" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="phpUnit - 2017.06.28 at 12h 36m 56s.xml">
+      <configuration name="phpUnit" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="phpUnit - 2017.06.28 at 12h 37m 40s.xml">
+      <configuration name="phpUnit" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="phpUnit - 2017.06.28 at 12h 37m 43s.xml">
+      <configuration name="phpUnit" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="174513000" />
+    <option name="totallyTimeSpent" value="180367000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1016,13 +983,13 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="47" y="-4" width="1873" height="1204" extended-state="6" />
+    <frame x="46" y="-11" width="1875" height="1212" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970026" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328792" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970026" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42960945" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23598506" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Reviews" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -1031,8 +998,8 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970026" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="News Feed" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41006523" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41006523" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1112,29 +1079,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/example.com/database/factories/ModelFactory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/example.com/app/Models/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="14" />
-          <folding>
-            <element signature="e#23#63#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/example.com/app/phptest_environment/work/value_via_url.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1142,7 +1090,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1158,7 +1105,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="199">
           <caret line="537" column="12" lean-forward="false" selection-start-line="537" selection-start-column="12" selection-end-line="537" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1176,7 +1122,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-773">
           <caret line="717" column="20" lean-forward="false" selection-start-line="717" selection-start-column="20" selection-end-line="717" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1192,7 +1137,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="648">
           <caret line="36" column="40" lean-forward="false" selection-start-line="36" selection-start-column="40" selection-end-line="36" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1200,7 +1144,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="23" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1216,15 +1159,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="19" column="0" lean-forward="true" selection-start-line="18" selection-start-column="11" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/example.com/resources/views/includes/sidebar.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="535">
-          <caret line="36" column="8" lean-forward="false" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1232,7 +1166,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
           <caret line="1" column="17" lean-forward="true" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1240,7 +1173,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1248,7 +1180,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
           <caret line="21" column="1" lean-forward="true" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1256,39 +1187,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1782">
           <caret line="99" column="5" lean-forward="true" selection-start-line="99" selection-start-column="5" selection-end-line="99" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/example.com/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="19" column="44" lean-forward="false" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/example.com/resources/views/hello.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="60" lean-forward="false" selection-start-line="0" selection-start-column="60" selection-end-line="0" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/example.com/public/_css/style.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="1" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/example.com/resources/views/hello.php" />
+    <entry file="file://$PROJECT_DIR$/example.com/public/_css/style.scss" />
     <entry file="file://$PROJECT_DIR$/example.com/resources/assets/sass/_variables.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1320,7 +1227,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1328,7 +1234,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="388" column="9" lean-forward="false" selection-start-line="388" selection-start-column="6" selection-end-line="388" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1336,9 +1241,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
           <caret line="2" column="4" lean-forward="false" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
-          <folding>
-            <marker date="1498558792183" expanded="true" signature="72:105" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1346,7 +1248,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
           <caret line="3" column="1" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1354,7 +1255,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="5903" column="9" lean-forward="false" selection-start-line="5903" selection-start-column="1" selection-end-line="5903" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1362,7 +1262,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1370,7 +1269,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
           <caret line="3" column="1" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1378,7 +1276,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="9" column="6" lean-forward="true" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1386,7 +1283,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="9" column="6" lean-forward="true" selection-start-line="8" selection-start-column="2" selection-end-line="9" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1394,7 +1290,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="10" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="11" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1430,15 +1325,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="9" column="6" lean-forward="false" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/example.com/resources/views/welcome.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="27" lean-forward="true" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1446,7 +1332,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="4" column="18" lean-forward="true" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1468,27 +1353,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/example.com/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="888">
-          <caret line="85" column="0" lean-forward="true" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
+        <state relative-caret-position="1368">
+          <caret line="85" column="0" lean-forward="false" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
           <folding>
             <element signature="e#7#389#0#PHP" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/example.com/app/Http/Controllers/PaintingsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="24" column="11" lean-forward="true" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/example.com/resources/views/register.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="21" column="26" lean-forward="false" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1503,15 +1372,73 @@
     <entry file="file://$PROJECT_DIR$/example.com/resources/views/includes/head.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
-          <caret line="7" column="13" lean-forward="true" selection-start-line="5" selection-start-column="4" selection-end-line="7" selection-end-column="13" />
+          <caret line="7" column="13" lean-forward="false" selection-start-line="5" selection-start-column="4" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example.com/resources/views/welcome.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="1" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="15" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example.com/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="339" column="27" lean-forward="false" selection-start-line="339" selection-start-column="27" selection-end-line="339" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example.com/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="13" column="43" lean-forward="true" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example.com/app/Http/Controllers/PaintingsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding>
+            <element signature="e#40#57#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example.com/resources/views/includes/sidebar.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="645">
+          <caret line="36" column="8" lean-forward="false" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/example.com/resources/views/paintings.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="25" column="34" lean-forward="true" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
+        <state relative-caret-position="504">
+          <caret line="28" column="10" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example.com/resources/views/register.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example.com/tests/Unit/ExampleTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="17" column="32" lean-forward="true" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
           <folding />
         </state>
       </provider>

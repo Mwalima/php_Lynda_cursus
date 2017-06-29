@@ -1,6 +1,6 @@
 @include('includes.head')
 <div id="contentWrapper">
-    <table>
+    <table class="teset">
         <div class="section_header section_header_grey">
             <h2>Inhoud</h2>
         </div>

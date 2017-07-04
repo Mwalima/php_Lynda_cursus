@@ -23,6 +23,18 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <style>
+        body{
+            height:100%;
+            width:100%;
+            background-image:url(../../../public/img/background.jpg);/*your background image*/
+            background-repeat:no-repeat;/*we want to have one single image not a repeated one*/
+            background-size:cover;/*this sets the image to fullscreen covering the whole screen*/
+            /*css hack for ie*/
+            filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.image.jpg',sizingMethod='scale');
+            -ms-filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(src='image.jpg',sizingMethod='scale')";
+        }
+    </style>
 </head>
 <body>
 

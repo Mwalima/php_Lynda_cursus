@@ -1,5 +1,9 @@
-@extends('layout.base')
-
+@extends('layouts.master')
+@section('header')
 @section('content')
-    i am the contact page
+jhgjhglhjglj
+@stop
+
+@section('footer')
+    <p>&copy; 2017 D&M productions</p>
 @stop

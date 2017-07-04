@@ -27,7 +27,7 @@
 <body>
 
 <div class="container">
-    <div class="header clearfix">
+    <div class="header">
         @yield('header')
     </div>
 

@@ -9,8 +9,3 @@
 @section('footer')
     <p>&copy; 2017 D&M productions</p>
 @stop
-
-
-
-
-

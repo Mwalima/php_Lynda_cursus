@@ -1,5 +1,6 @@
-@include('includes.head')
-<div id="contentWrapper">
+@extends('layouts.master')
+@section('header')
+@section('content')
 
   <article id="container">
     <h1>Sign Up!</h1>
@@ -22,7 +23,9 @@
     </article>
   </article>
 
-  @include('includes.sidebar')
-      </div>
-@include('includes.footer')
+@stop
+
+@section('footer')
+  <p>&copy; 2017 D&M productions</p>
+@stop
 

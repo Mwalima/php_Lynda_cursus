@@ -1,31 +1,33 @@
 @extends('layouts.master')
-@section('header')
-@section('content')
-
-  <article id="container">
+@extends('includes.sidebar')
+@section('sidebar-left')
     <h1>Sign Up!</h1>
-    <article class="post">
-      <h2>New User Registration</h2>
-      {{ Form::open(array('url' => 'register')) }}
+    <form class="form-inline" method="POST" action='/register'>
+        {{ csrf_field() }}
+        <label class="sr-only" for="inlineFormInput" name="username">Username</label>
+        <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+            <div class="input-group-addon">name</div>
+            <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="inlineFormInput"
+                   placeholder="Your name here!" name="username">
+        </div>
 
-      {{Form::label('email', 'Email Address')}}
-      {{Form::text('email')}}
+        <label class="sr-only" for="inlineFormInputGroup" name="email">Email Address</label>
+        <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+            <div class="input-group-addon">@</div>
+            <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Email Address" name="email">
+        </div>
 
-      {{Form::label('username', 'Username')}}
-      {{Form::text('username')}}
+        <label class="sr-only" for="inlineFormInputGroup" name="password">Password</label>
+        <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+            <div class="input-group-addon">password</div>
+            <input type="password" class="form-control" id="inlineFormInputGroup" placeholder="password"
+                   name="password">
+        </div>
 
-      {{Form::label('password', 'password')}}
-      {{Form::password('password')}}
-
-      {{Form::submit('Sign Up')}}
-
-      {{Form::close()}}
-    </article>
-  </article>
-
+        <button type="submit" class="btn btn-primary">Sign Up</button>
+    </form>
 @stop
-
 @section('footer')
-  <p>&copy; 2017 D&M productions</p>
+    <p>&copy; 2017 D&M productions</p>
 @stop
 

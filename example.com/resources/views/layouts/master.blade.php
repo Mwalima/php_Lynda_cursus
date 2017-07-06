@@ -28,12 +28,14 @@
 
 <div class="container">
     <div class="header">
-        @yield('header')
+        @include('includes.header')
     </div>
 
     <div class="jumbotron">
         @yield('sidebar-up')
     </div>
+
+    @include('components.breadcrumbs')
 
     <div class="row marketing">
         <div class="col-lg-6">
@@ -44,6 +46,8 @@
             @yield('sidebar-right')
         </div>
     </div>
+
+
 
     <div class="content">
         @yield('content')

@@ -11,12 +11,8 @@ Breadcrumbs::register('welcome', function($breadcrumbs) {
 });
 
 Breadcrumbs::register('page', function ($breadcrumbs, $page) {
-
         $breadcrumbs->parent('welcome');
-    //dd($page[0]);
         foreach ($page as $ancestor) {
-
             $breadcrumbs->push($ancestor,$ancestor);
         }
-
     });

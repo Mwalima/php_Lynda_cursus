@@ -1,9 +1,11 @@
 @extends('layouts.master')
-@section('header')
-@section('content')
-jhgjhglhjglj
+@extends('includes.sidebar')
+@section('sidebar-left')
+    werk content goes here
 @stop
+@section('sidebar-right')
 
+@stop
 @section('footer')
     <p>&copy; 2017 D&M productions</p>
 @stop

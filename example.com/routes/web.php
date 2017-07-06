@@ -13,51 +13,36 @@
 
 
 Route::get('/', function () {
-//    $painting = new \App\Painting();
-//    $painting->title = "Heel mooi schilderij";
-//    $painting->artist="IkZelf";
-//    $painting->year=2017;
-//    $painting->save();
+    $name = "Myname";
 
     return view('welcome');
 });
 
-
-Route::get('/users', function() {
-    App\User::create([
-        'name' => Input::get('username'),
-        'email' => Input::get('email'),
-        'password' => Input::get('password')
-    ]);
-
-    return response()->json(\App\User::all());
-});
+//Route::get('/users', function() {
+ //   App\User::create([
+//        'name' => Input::get('username'),
+//        'email' => Input::get('email'),
+//        'password' => Input::get('password')
+//    ]);
+//
+//    return response()->json(\App\User::all());
+//});
 
 
 Route::get('about',function(){
-    return 'About content goes here';
+    return view('about');
 });
 
-Route::get('about/directions',function(){
-    return 'directions goed here';
+Route::get('contact',function(){
+    return view('contact');
 });
 
-Route::get('about/{theSubject}',function($theSubject){
-    return $theSubject.'About content goes here';
-});
+//Route::get('about/{theSubject}',function($theSubject){
+//    return $theSubject.'About content goes here';
+//});
 
 
-Route::post('/register', function(){
-    $user = new \App\User();
-    $user->email =Input::get('email');
-    $user->username = Input::get('username');
-    $user->password = Hash::make(Input::get('password'));
-    $user->save();
-    $theEmail = Input::get('email');
-    return View::make('thanks')->with('theEmail', $theEmail);
-
-});
-
+Route::post('/register', 'SubscriptionController@setSubscription')->name('register');
 
 Route::get('welcome', function () {return view('welcome');})->name('welcome');
 
@@ -78,10 +63,8 @@ Route::group(['middleware' => ['paint']], function() {
         $name = Input::get('title');
         return view('paint_form')->with('title',$name);
     });
-
 });
 
 Route::get('thanks', function () {return view('thanks');})->name('thanks');
-
 
 Route::get('paintings', "PaintingsController@jasonOutput")->name('paintings');

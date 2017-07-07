@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Routing\RouteCollection;
 use PhpParser\Node\Scalar\MagicConst\Dir;
+use App\Models\Registration;
 
 
 
@@ -24,6 +25,13 @@ class RegisterController extends Controller
             echo "<td>$i * $number = " . $i * $number . "</td></tr>";
         }
         echo "</table>";
+    }
+
+    public function show($id){
+
+        $register = Registration::find($id);
+
+        return view('register');
     }
 
 }

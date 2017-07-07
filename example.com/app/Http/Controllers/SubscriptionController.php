@@ -21,21 +21,10 @@ class SubscriptionController extends Controller{
         $request->username = $request->input('username');
         $request->password = Hash::make($request->input('password'));
 
-
         Registration::insertUser($request->email,$request->username,$request->password);
 
-        $theEmail = $request->input('email');
-
-        return view('thanks')->with('theEmail', $theEmail);
-    }
-
-    public function getAccounts(){
-
         $accounts = Registration::getUsers();
-
         return view('thanks',compact('accounts'));
-
-
     }
 
 }

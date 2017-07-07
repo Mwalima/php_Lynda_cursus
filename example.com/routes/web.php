@@ -18,17 +18,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-//Route::get('/users', function() {
- //   App\User::create([
-//        'name' => Input::get('username'),
-//        'email' => Input::get('email'),
-//        'password' => Input::get('password')
-//    ]);
-//
-//    return response()->json(\App\User::all());
-//});
-
-
 Route::get('about',function(){
     return view('about');
 });
@@ -37,12 +26,9 @@ Route::get('contact',function(){
     return view('contact');
 });
 
-//Route::get('about/{theSubject}',function($theSubject){
-//    return $theSubject.'About content goes here';
-//});
+Route::post('register', 'SubscriptionController@setSubscription')->name('register');
 
-
-Route::post('/register', 'SubscriptionController@setSubscription')->name('register');
+Route::post('register', 'SubscriptionController@setSubscription2')->name('register');
 
 Route::get('welcome', function () {return view('welcome');})->name('welcome');
 
@@ -50,11 +36,21 @@ Route::get('config', function () {return view('config');})->name('config');
 
 Route::get('register', function () {return view('register');})->name('register');
 
-Route::get('logout', function () {return view('logout');})->name('logout');
 
-Route::get('login', function () {return view('login');})->name('login');
+Route::get('logout', function () {
+    Auth::logout();
+    return view('logout');})->name('logout');
 
-Route::get('register/{number?}','RegisterController@create')->where('number', '[0-9]+');
+Route::group(['middleware'=>['login']], function(){
+Route::get('login',function(){ return view('login');})->name('login');
+Route::match(['get', 'post'],'test','LoginCheckController@checkUser');
+});
+
+//Route::get('register/{number?}','RegisterController@create')->where('number', '[0-9]+');
+
+
+Route::get('register/{register?}','RegisterController@show');
+
 
 Route::get('werk', function () {return view('werk');})->name('werk');
 

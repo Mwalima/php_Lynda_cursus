@@ -17,11 +17,11 @@ class SubscriptionController extends Controller{
 
     public function setSubscription(Request $request)
     {
-        $request->email =$request->input('email');
         $request->username = $request->input('username');
+        $request->email =$request->input('email');
         $request->password = Hash::make($request->input('password'));
 
-        Registration::insertUser($request->email,$request->username,$request->password);
+        Registration::insertUser($request->username,$request->email,$request->password);
 
         $accounts = Registration::getUsers();
         return view('thanks',compact('accounts'));

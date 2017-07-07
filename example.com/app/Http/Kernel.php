@@ -2,8 +2,10 @@
 
 namespace App\Http;
 
+use App\Http\Middleware\AuthenticateLogin;
 use App\Http\Middleware\CreatePaintings;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
+
 
 class Kernel extends HttpKernel
 {
@@ -58,5 +60,6 @@ class Kernel extends HttpKernel
         'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'paint'=>CreatePaintings::class,
+        'login'=>AuthenticateLogin::class,
     ];
 }

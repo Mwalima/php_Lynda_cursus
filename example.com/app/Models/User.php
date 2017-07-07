@@ -28,4 +28,8 @@ class User extends Authenticatable
     ];
 
 
+    public static function checkUserLogin($username)
+    {
+        return self::where('username',$username)->get();
+    }
 }

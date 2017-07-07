@@ -1,5 +1,5 @@
 
-{{ Form::open(array('url' => 'login')) }}
+{{ Form::open(array('url' => 'test')) }}
 
 {{Form::label('username', 'Username')}}
 {{Form::text('username')}}

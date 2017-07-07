@@ -15,12 +15,13 @@ class Registration extends Model
 
     public static function insertUser($username, $email, $password)
     {
-        $data = array(
-            $username,$email,$password
-        );
-        //dd($data);
+        $flight = new Registration();
 
-        self::create($data);
+        $flight->username = $username;
+        $flight->email = $email;
+        $flight->password = $password;
+
+        $flight->save();
     }
 
     public static function getUsers()

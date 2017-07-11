@@ -17,6 +17,18 @@
   {{Form::submit('Sign Up')}}
 
   {{Form::close()}}
+
+  @if(!empty($users))
+  <li>
+  You have searched for {{$users->username}}
+  </li>
+  <form method='POST' action="/test">
+  {{ csrf_field() }}
+  <label>Voer hier het id in</label>
+  <input type="text" name="id">
+  <button type="submit">find user bij id</button>
+  </form>
+  @endif
 @stop
 @section('footer')
   <p>&copy; 2017 D&M productions</p>

@@ -15,6 +15,7 @@ class LoginCheckController extends  Controller{
     public function checkUser(Request $request){
 
         $name = $request->input('username');
-        return view('test')->with('name', $name);
+
+        return view('test', compact('name'));
     }
 }

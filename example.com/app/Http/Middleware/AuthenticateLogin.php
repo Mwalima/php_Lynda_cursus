@@ -15,6 +15,7 @@ class AuthenticateLogin
      */
     public function handle($request, Closure $next)
     {
+
        if (!empty($request->input('username'))) {
           return redirect('test');
         }

@@ -27,7 +27,7 @@
         <button type="submit" class="btn btn-primary">Sign Up</button>
     </form>
 @stop
-{{--{{$register}}--}}
+{{--{{$users}}--}}
 @section('footer')
     <p>&copy; 2017 D&M productions</p>
 @stop

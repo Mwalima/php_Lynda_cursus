@@ -17,7 +17,7 @@ class PaintingsController extends Controller
     {
         $paintings = \App\Painting::all();
 
-        return view("paintings")->with(['paintings'=>$paintings]);
+        return view("pages.paintings")->with(['paintings'=>$paintings]);
 
     }
 }

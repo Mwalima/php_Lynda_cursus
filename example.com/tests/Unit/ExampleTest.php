@@ -8,6 +8,11 @@ use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 class ExampleTest extends TestCase
 {
+    //to run php unit
+    //
+    // vendor/bin/phpunit tests/Unit/ExampleTest.php
+
+
     /**
      * A basic test example.
      *

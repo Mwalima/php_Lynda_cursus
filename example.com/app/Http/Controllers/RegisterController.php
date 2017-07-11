@@ -3,16 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Route;
-use Illuminate\Routing\RouteCollection;
-use PhpParser\Node\Scalar\MagicConst\Dir;
 use App\Models\Registration;
+use App\User;
+use App\Http\Controllers\Auth;
 
 
 
 class RegisterController extends Controller
 {
-
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function showRegister()
     {
         return view('register');
@@ -27,11 +28,38 @@ class RegisterController extends Controller
         echo "</table>";
     }
 
+    /**
+     * @param $id
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function show($id){
 
         $register = Registration::find($id);
 
         return view('register');
+    }
+
+    /**
+     * @param Request $request
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function getUsersById(Request $request){
+
+        $id = $request->input('id');
+
+        $users = User::find($id);
+
+        return view('test', compact('users'));
+    }
+
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function logOutUser(){
+
+       //$user = User::logout();
+
+        return view('pages.logout');
     }
 
 }

@@ -22,13 +22,14 @@
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/assets/css/animation.css">
     <![endif]-->
     <style>
         body{
             height:200%;
             width:100%;
             background-image:url(img/background.jpg);/*your background image*/
-            background-repeat:no-repeat;/*we want to have one single image not a repeated one*/
+            /*background-repeat:no-repeat;!*we want to have one single image not a repeated one*!*/
             background-size:cover;/*this sets the image to fullscreen covering the whole screen*/
             /*css hack for ie*/
             filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.image.jpg',sizingMethod='scale');
@@ -58,11 +59,11 @@
     @include('components.breadcrumbs')
 
     <div class="row marketing">
-        <div class="col-lg-6">
+        <div class="col-12 col-md-auto">
             @yield('sidebar-left')
         </div>
 
-        <div class="col-lg-6">
+        <div class="col-12 col-md-auto">
             @yield('sidebar-right')
         </div>
     </div>

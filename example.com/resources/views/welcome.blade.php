@@ -32,6 +32,9 @@
     }
     </script>
 @stop
+
 @section('footer')
+
+    {{$users->links()}}
     <p>&copy; 2017 D&M productions</p>
 @stop

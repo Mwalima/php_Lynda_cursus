@@ -78,8 +78,9 @@
         @yield('footer')
     </footer>
 
-</div> <!-- /container -->
-<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+</div>
+
+
 <script src="{{ asset('js/ie10-viewport-bug-workaround.js') }}"></script>
 </body>
 </html>

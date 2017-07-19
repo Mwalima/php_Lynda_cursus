@@ -64,3 +64,7 @@ Route::get('paintings', "PaintingsController@jasonOutput")->name('paintings');
 //Route::get('posts', 'PostsController@index')->name('posts');
 
 Route::post('posts', 'RegisterController@logOutUser');
+
+Route::get('/',function(){
+    return view('welcome', ['users'=> App\User::paginate(4)]);
+});

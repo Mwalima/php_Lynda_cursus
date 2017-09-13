@@ -19,6 +19,7 @@
     "lodash": "^4.17.4",
     "npm-install-webpack-plugin": "^4.0.4",
     "vue": "^2.1.10",
+    "webpack": "^3.5.5",
     "webpack-dev-server": "^1.16.5"
   }
 }

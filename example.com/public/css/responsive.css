@@ -93,6 +93,7 @@
 
 @media only screen and (max-width: 479px) {
 	/****Mobile Portrait 320 ****/
+	.jumbotron{background-color: #9fff98}
 	.contact-info-box{ margin-left:0px;}
 	.header{ padding:40px;}
 	.social-link{ margin-left:0px;}

@@ -68,3 +68,8 @@ Route::post('posts', 'RegisterController@logOutUser');
 Route::get('/',function(){
     return view('welcome', ['users'=> App\User::paginate(4)]);
 });
+
+Route::get('javascript', function(){
+
+    return view('pages.javascript');
+});

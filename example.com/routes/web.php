@@ -23,8 +23,18 @@ Route::get('/invite',function(){
     return view('invitation');
 });
 
-
 Route::get('/mydashboard',function(){
     return view('mydashboard');
+});
+
+Route::get('/whoweare',function(){
+    return view('whoweare');
+});
+
+Route::get('/whatwedo',function(){
+    return view('whatwedo');
+});
+Route::get('/whotocontact',function(){
+    return view('whotocontact');
 });
 

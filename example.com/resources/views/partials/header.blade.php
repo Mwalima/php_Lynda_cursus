@@ -10,7 +10,7 @@
     <link href="{{ asset('css/font-style.css') }}" rel="stylesheet">
     <link href="{{ asset('css/flexslider.css') }}" rel="stylesheet">
 
-    <script type="text/javascript" src="{{ asset('js/jquery.js')}}"></script>
+    <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
     <script type="text/javascript" src="{{ asset('js/bootstrap.min.js')}}"></script>
 
     <script type="text/javascript" src="{{ asset('js/lineandbars.js')}}"></script>

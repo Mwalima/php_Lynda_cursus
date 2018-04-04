@@ -3,16 +3,10 @@
 namespace Tests\Unit;
 
 use Tests\TestCase;
-use Illuminate\Foundation\Testing\DatabaseMigrations;
-use Illuminate\Foundation\Testing\DatabaseTransactions;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class ExampleTest extends TestCase
 {
-    //to run php unit
-    //
-    // vendor/bin/phpunit tests/Unit/ExampleTest.php
-
-
     /**
      * A basic test example.
      *

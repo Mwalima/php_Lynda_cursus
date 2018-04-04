@@ -4,12 +4,6 @@
 
 // Variables
 @import "variables";
-// pages
-@import "welcome";
 
-@import "card_game";
-
-@import "image";
 // Bootstrap
-@import "../../../public/css/bootstrap-theme.min.css";
-
+@import "~bootstrap-sass/assets/stylesheets/bootstrap";

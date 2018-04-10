@@ -6,3 +6,4 @@
     <br>
     <p>Paul Smith</p>
     <p><bold>Liverpool, England</bold></p>
+</div>

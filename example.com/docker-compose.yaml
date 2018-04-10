@@ -11,7 +11,7 @@ services:
       - ./:/var/www/html
     environment:
       - "DB_PORT=3306"
-      - "DB_HOST=database"
+      - "DB_HOST=mysql"
 
   # The Web Server
   web:
@@ -23,19 +23,32 @@ services:
       - app
     ports:
       - 8080:80
+    links:
+      - mysql
+
 
   # The Database
-  database:
-    image: mysql:5.6
-    volumes:
-      - dbdata:/var/lib/mysql
-    environment:
-      - "MYSQL_DATABASE=homestead"
-      - "MYSQL_USER=homestead"
-      - "MYSQL_PASSWORD=secret"
-      - "MYSQL_ROOT_PASSWORD=secret"
-    ports:
-        - "33061:3306"
+#  database:
+#    image: mysql:5.7
+#    volumes:
+#      - dbdata:/var/lib/mysql
+#    environment:
+#      - "MYSQL_DATABASE=OOP"
+#      - "MYSQL_USER=root"
+#      - "MYSQL_PASSWORD=qwerty"
+#      - "MYSQL_ROOT_PASSWORD=qwerty"
+#    ports:
+#        - "33061:3306"
+#
+#volumes:
+#  dbdata:
 
-volumes:
-  dbdata:
+  mysql:
+      build: builds/mysql
+      container_name: mysql
+      ports:
+        - 33061:3306
+      environment:
+        - MYSQL_ROOT_PASSWORD=qwerty
+      volumes:
+        - /Documents/workspace/php_Lynda_cursus/example.com/_mysql:/var/lib/mysql

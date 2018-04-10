@@ -1,3 +1,9 @@
+<!doctype html>
+<html>
+<head>
+    @include('partials.header')
+</head>
+<body>
 <div class="navbar-nav navbar-inverse navbar-fixed-top">
     @include('partials.nav_menu')
 </div>
@@ -8,43 +14,28 @@
                 <div id="register-info">
                     <div class="cont2">
                         <div class="thumbnail">
-                            <img src="{{asset('images/face.jpg')}}" alt="Marcel Newman" class="img-circle">
+                            <img src="{{asset('images/face2.png')}}" alt="Mwalima Peltenburg" class="img-circle">
                         </div><!-- /thumbnail -->
-                        <h2>Marcel Newman</h2>
+                        <h2>Mwalima Peltenburg</h2>
                     </div>
                     <div class="row">
                         <div class="col-lg-3">
                             <div class="cont3">
-                                <p><ok>Username:</ok> BASICOH</p>
-                                <p><ok>Mail:</ok> hola@basicoh.com</p>
-                                <p><ok>Location:</ok> Madrid, Spain</p>
-                                <p><ok>Address:</ok> Blahblah Ave. 879</p>
+                                <p><ok>Username:</ok>{{$name}}</p>
+                                <p><ok>Mail:</ok>{{$email}}</p>
+                                <p><ok>Location:</ok>{{$city}}</p>
+                                <p><ok>Address:</ok>{{$street}}</p>
                             </div>
                         </div>
                         <div class="col-lg-3">
                             <div class="cont3">
-                                <p><ok>Registered:</ok> April 9, 2010</p>
-                                <p><ok>Last Login:</ok> January 29, 2013</p>
-                                <p><ok>Phone:</ok> +34 619 663553</p>
-                                <p><ok>Mobile</ok> +34 603 093384</p>
+                                {{--<p><ok>Registered:</ok>{{$created_at}}</p>--}}
+                                {{--<p><ok>Last Login:</ok>{{$lastlogin}}</p>--}}
+                                {{--<p><ok>Phone:</ok>{{$phonenumber}}</p>--}}
+                                {{--<p><ok>Mobile</ok>{{$mobilephonenumber}}</p>--}}
                             </div>
                         </div>
                     </div><!-- /inner row -->
-                    <hr>
-                    <div class="cont2">
-                        <h2>Choose Your Option</h2>
-                    </div>
-                    <br>
-                    <div class="info-user2">
-                        <span aria-hidden="true" class="li_user fs1"></span>
-                        <span aria-hidden="true" class="li_settings fs1"></span>
-                        <span aria-hidden="true" class="li_mail fs1"></span>
-                        <span aria-hidden="true" class="li_key fs1"></span>
-                        <span aria-hidden="true" class="li_lock fs1"></span>
-                        <span aria-hidden="true" class="li_pen fs1"></span>
-                    </div>
-
-
                 </div>
             </div>
 
@@ -56,29 +47,49 @@
                     <legend>User Register</legend>
 
                     <div class="body">
-                        <!-- first name -->
-                        <label for="name">First name</label>
-                        <input name="name" class="input-huge" type="text">
-                        <!-- last name -->
-                        <label for="surname">Last name</label>
-                        <input name="surname" class="input-huge" type="text">
-                        <!-- username -->
-                        <label>Username</label>
-                        <input class="input-huge" type="text">
-                        <!-- email -->
-                        <label>E-mail</label>
-                        <input class="input-huge" type="text">
-                        <!-- password -->
-                        <label>Password</label>
-                        <input class="input-huge" type="text">
+                        {!! Form::open(['route'=>'Users.store']) !!}
 
-                    </div>
+                        <div class="form-group {{ $errors->has('name') ? 'has-error' : '' }}">
+                            {!! Form::label('Name:') !!}
+                            {!! Form::text('name', old('name'), ['class'=>'form-control', 'placeholder'=>'Enter Name']) !!}
+                            <span class="text-danger">{{ $errors->first('name') }}</span>
+                        </div>
+                        <div class="form-group {{ $errors->has('lastname') ? 'has-error' : '' }}">
+                            {!! Form::label('Lastname:') !!}
+                            {!! Form::text('lastname', old('lastname'), ['class'=>'form-control', 'placeholder'=>'Enter Name']) !!}
+                            <span class="text-danger">{{ $errors->first('lastname') }}</span>
+                        </div>
 
-                    <div class="footer">
+                        <div class="form-group {{ $errors->has('email') ? 'has-error' : '' }}">
+                            {!! Form::label('Email:') !!}
+                            {!! Form::text('email', old('email'), ['class'=>'form-control', 'placeholder'=>'Enter Email']) !!}
+                            <span class="text-danger">{{ $errors->first('email') }}</span>
+                        </div>
+
+                        <div class="form-group {{ $errors->has('street') ? 'has-error' : '' }}">
+                            {!! Form::label('Street:') !!}
+                            {!! Form::text('street', old('street'), ['class'=>'form-control', 'placeholder'=>'Enter streetname']) !!}
+                            <span class="text-danger">{{ $errors->first('street') }}</span>
+                        </div>
+
+                        <div class="form-group {{ $errors->has('housenumber') ? 'has-error' : '' }}">
+                            {!! Form::label('Housenumber:') !!}
+                            {!! Form::text('housenumber', old('message'), ['class'=>'form-control', 'placeholder'=>'Enter housenumber']) !!}
+                            <span class="text-danger">{{ $errors->first('housenumber') }}</span>
+                        </div>
+
+                        <div class="form-group {{ $errors->has('city') ? 'has-error' : '' }}">
+                            {!! Form::label('City:') !!}
+                            {!! Form::text('city', old('city'), ['class'=>'form-control', 'placeholder'=>'Enter cityname']) !!}
+                            <span class="text-danger">{{ $errors->first('city') }}</span>
+                        </div>
                         <label class="checkbox inline">
                             <input type="checkbox" id="inlineCheckbox1" value="option1"> I agree with the terms &amp; conditions
                         </label>
-                        <button type="submit" class="btn btn-success">Register</button>
+                        <div class="form-group">
+                            <button class="btn btn-success">Register!</button>
+                        </div>
+                        {!! Form::close() !!}
                     </div>
                 </form>
             </div>
@@ -86,17 +97,7 @@
 
     </div>
 </div>
-
 <div id="footerwrap">
-    <footer class="clearfix"></footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12 col-lg-12">
-                <p><img src="{{asset('images/logo.png')}}" alt=""></p>
-                <p>Blocks Dashboard Theme - Crafted With Love - Copyright 2013</p>
-            </div>
-
-        </div><!-- /row -->
-    </div><!-- /container -->
+    @include('partials.footer')
 </div><!-- /footerwrap -->
 </body></html>

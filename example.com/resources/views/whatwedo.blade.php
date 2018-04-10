@@ -5,7 +5,7 @@
 </head>
 <body>
 <div class="index_title">
-    <h1>What we do</h1>
+    <h1><img src="/images/w_medium.png">hat we do</h1>
 </div>
 
 
@@ -15,6 +15,9 @@
     @include('partials.nav_menu')
 </div>
 <div class="container">
+</div>
+<div id="footerwrap">
+    @include('partials.footer')
 </div>
 </body>
 </html>

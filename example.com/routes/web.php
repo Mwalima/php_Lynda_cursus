@@ -11,13 +11,13 @@
 |
 */
 
+
 Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/users',function(){
-    return view('users');
-});
+Route::get('/users','UserController@getUserCredentials');
+Route::post('/users',['as'=>'Users.store', 'uses'=>'UserController@insertUser']);
 
 Route::get('/invite',function(){
     return view('invitation');
@@ -38,3 +38,7 @@ Route::get('/whotocontact',function(){
     return view('whotocontact');
 });
 
+Route::get('/whotocontact', 'ContactMailController@contactUS');
+Route::post('/whotocontact', ['as'=>'contactus.store','uses'=>'ContactMailController@contactUSPost']);
+
+Route::get('/emailsend', 'ContactMailController@mailRecieved');

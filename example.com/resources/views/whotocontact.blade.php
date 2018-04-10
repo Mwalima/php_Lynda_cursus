@@ -5,7 +5,7 @@
 </head>
 <body>
 <div class="index_title">
-    <h1>Who to Contact</h1>
+    <h1><img src="/images/w_medium.png">ho to Contact</h1>
 </div>
 
 <!-- NAVIGATION MENU -->
@@ -14,6 +14,12 @@
     @include('partials.nav_menu')
 </div>
 <div class="container">
+    <div class="contact_form">
+        @include('partials.contact_form')
+    </div>
+</div>
+<div id="footerwrap">
+    @include('partials.footer')
 </div>
 </body>
 </html>
